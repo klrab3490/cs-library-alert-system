@@ -1,8 +1,4 @@
-import Link from "next/link";
-import { MdDashboard } from "react-icons/md";
-import { AiOutlineUser } from "react-icons/ai";
-import { TbBooks } from "react-icons/tb";
-
+import Link from "next/link"
 
 const page = () => {
   return (
@@ -11,20 +7,17 @@ const page = () => {
       <div className="w-full flex mb-3 pt-3">
         <ul className="hidden sm:flex gap-4">
           <li className="logo_text hover:text-gray-600">
-            <Link href="/admin" className="flex justify-center">
-              <MdDashboard className="icon"/>
+            <Link href="/admin">
               Dashboard
             </Link>
           </li>
           <li className="logo_text hover:text-gray-600">
-            <Link href="/admin/users" className="flex">
-              <AiOutlineUser />
+            <Link href="/admin/users">
               Users
             </Link>
           </li>
           <li className="logo_text hover:text-gray-600">
-            <Link href="/admin/books" className="flex">
-              <TbBooks />
+            <Link href="/admin/books">
               Books
             </Link>
           </li>
@@ -32,7 +25,7 @@ const page = () => {
       </div>
       {/* Body */}
       <div className="">
-
+        User Data Interface
       </div>
     </div>
   )

@@ -3,7 +3,7 @@ import Provider from '@components/Provider';
 import '@styles/global.css';
 
 export const metadata = {
-    title: "Prompt Topia",
+    title: "Library Alert System",
     description: "Discover & Share AI Prompts"
 }
 
