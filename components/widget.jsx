@@ -1,6 +1,7 @@
 import { AiOutlineUser } from "react-icons/ai";
 import { TbBooks } from "react-icons/tb";
 import { MdKeyboardArrowUp,MdKeyboardArrowDown } from "react-icons/md";
+import Link from "next/link";
 
 const Widget = ( {type} ) => {
     let data;
@@ -12,7 +13,7 @@ const Widget = ( {type} ) => {
         case "user":
             data = {
                 title: "USERS",
-                link: "See all users",
+                link: (<Link href='/admin/users'>See all users</Link>),
                 icon: (
                     <AiOutlineUser className="icon" />
                 ),
@@ -21,7 +22,7 @@ const Widget = ( {type} ) => {
             case "books":
                 data = {
                     title: "BOOKS",
-                    link: "See all books",
+                    link: (<Link href='/admin/books'>See all books</Link>),
                     icon: (
                         <TbBooks className="icon" />
                     ),
