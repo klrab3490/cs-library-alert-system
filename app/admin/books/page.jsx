@@ -2,7 +2,6 @@ import Link from "next/link";
 import { MdDashboard } from "react-icons/md";
 import { AiOutlineUser } from "react-icons/ai";
 import { TbBooks } from "react-icons/tb";
-import Widget from "@components/widget";
 
 const page = () => {
   return (
