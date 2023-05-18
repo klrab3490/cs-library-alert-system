@@ -19,12 +19,15 @@ const rows = [
   createData('Eclair', 262, 16.0, 24, 6.0),
   createData('Cupcake', 305, 3.7, 67, 4.3),
   createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData('Sandwitch', 356, 16.0, 49, 3.9),
+  createData('Bread', 356, 16.0, 49, 3.9),
+  createData('Samuuna', 356, 16.0, 49, 3.9),
 ];
 
 export default function BasicTable() {
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <TableContainer>
+      <Table sx={{ width: { xs:200, sm:200, md:600, lg:700, xl:800,} }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>Dessert (100g serving)</TableCell>

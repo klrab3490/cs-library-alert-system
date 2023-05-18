@@ -2,10 +2,8 @@ import Table from "@components/Table";
 
 const page = () => {
   return (
-    <div className="app">
-      <div className="">
-        <Table className='flex-center' />
-      </div>
+    <div className="flex-center p-0">
+      <Table className="flex-center"/>
     </div>
   )
 }

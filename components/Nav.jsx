@@ -46,8 +46,6 @@ const Nav = () => {
               <Link href='/signup'> Sign Up </Link>
             </li>
           ) }
-          
-
         </ul>
       </div>
 

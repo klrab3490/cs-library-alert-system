@@ -30,7 +30,7 @@ const page = () => {
       </div>
       <div className="bottom">
         <div className="button">
-          <Link href="/user">
+          <Link href="/admin">
             <button type="submit">Login</button>
           </Link>
         </div>

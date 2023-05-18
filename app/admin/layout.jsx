@@ -6,7 +6,7 @@ const AdminLayout = ({ children }) => {
     return (
         <Provider>
             <AdminNav />
-            <section className='app'>{children}</section>
+            <section className=''>{children}</section>
         </Provider>
     )
 };
