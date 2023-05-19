@@ -7,49 +7,73 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
+const Table2 = ({ type }) => {
+    let tableheader;
+    let rows;
 
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-  createData('Sandwitch', 356, 16.0, 49, 3.9),
-  createData('Bread', 356, 16.0, 49, 3.9),
-  createData('Samuuna', 356, 16.0, 49, 3.9),
-];
+    switch (type) {
+        case "user":
+            function createData1( id, name, status, settig ) {
+                return { id, name, status, settig };
+            };
+            tableheader = {
+                col1: "User ID",
+                col2: "User Name",
+                col3: "Status",
+                col4: "Settings",
+            };
+            rows = [
+                createData1(1,'Frozen yoghurt', 159, 6.0),
+                createData1(2,'Ice cream sandwich', 237, 9.0),
+                createData1(3,'Eclair', 262, 16.0),
+                createData1(4,'Cupcake', 305, 3.7),
+                createData1(5,'Gingerbread', 356, 3.9),
+                createData1(6,'Sandwitch', 356, 3.9),
+                createData1(7,'Bread', 356, 3.9),
+                createData1(8,'Samuuna', 356, 3.9),
+            ];
+            break;
+        case "books":
+            function createData(id,name,status,settig ) {
+                return { id ,name, status, settig };
+            };
+            tableheader = {
+                col1: "Book ID",
+                col2: "Book Name",
+                col3: "Quantity",
+                col4: "Settings",
+            };
+            rows = [
+                createData(1,"A",5,10),
+                createData(2,"AB",15,20),
+                createData(3,"ABC",25,30),
+                createData(4,"ABCD",35,40),
+                createData(5,"ABCDE",0,50),
+            ];
+            break;
+        default:
+            break;
+    }
 
-export default function BasicTable() {
   return (
     <TableContainer>
-      <Table sx={{ width: { xs:200, sm:200, md:600, lg:700, xl:800,} }} aria-label="simple table">
+      <Table sx={{ width: { xs:100, sm:600, md:600, lg:700, xl:900,} }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell> {tableheader.col1} </TableCell>
+            <TableCell> {tableheader.col2} </TableCell>
+            <TableCell> {tableheader.col3} </TableCell>
+            <TableCell> {tableheader.col4} </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+            <TableRow key={rows.id}>
+              <TableCell>{row.id}</TableCell>
+              <TableCell>{row.name}</TableCell>
+              <TableCell>{row.status}</TableCell>
+              <TableCell>{row.settig}</TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -57,3 +81,5 @@ export default function BasicTable() {
     </TableContainer>
   );
 }
+
+export default Table2;

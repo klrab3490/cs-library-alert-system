@@ -1,10 +1,9 @@
+import Table2 from "@components/Table";
 
 const page = () => {
   return (
-    <div className="">
-      <div className="w-full flex-center">
-        Book Data Interface
-      </div>
+    <div className="flex-center p-0">
+      <Table2 type='books'/>
     </div>
   )
 }
