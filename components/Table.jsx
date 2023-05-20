@@ -57,23 +57,23 @@ const Table2 = ({ type }) => {
     }
 
   return (
-    <TableContainer>
+    <TableContainer className='font-satoshi'>
       <Table sx={{ width: { xs:100, sm:600, md:600, lg:700, xl:900,} }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell> {tableheader.col1} </TableCell>
             <TableCell> {tableheader.col2} </TableCell>
-            <TableCell> {tableheader.col3} </TableCell>
-            <TableCell> {tableheader.col4} </TableCell>
+            <TableCell align='center'> {tableheader.col3} </TableCell>
+            <TableCell align='center'> {tableheader.col4} </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={rows.id}>
-              <TableCell>{row.id}</TableCell>
+              <TableCell>{row.id}.</TableCell>
               <TableCell>{row.name}</TableCell>
-              <TableCell>{row.status}</TableCell>
-              <TableCell>{row.settig}</TableCell>
+              <TableCell align='center'>{row.status}</TableCell>
+              <TableCell align='center'>{row.settig}</TableCell>
             </TableRow>
           ))}
         </TableBody>

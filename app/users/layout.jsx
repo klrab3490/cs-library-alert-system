@@ -1,14 +1,14 @@
 import Provider from '@components/Provider';
 import 'styles/styles.modules.css';
-import AdminNav from '@components/AdminNav';
+import UserNav from '@components/UserNav';
 
-const AdminLayout = ({ children }) => {
+const UserLayout = ({ children }) => {
     return (
         <Provider>
-            <AdminNav />
+            <UserNav />
             <section className=''>{children}</section>
         </Provider>
     )
 };
 
-export default AdminLayout;
+export default UserLayout;
