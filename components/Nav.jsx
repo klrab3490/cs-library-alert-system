@@ -26,7 +26,7 @@ const Nav = () => {
       <div className="justify-left">
         <ul className='hidden sm:flex gap-4'>
           <li className='logo_text hover:text-gray-600'>
-            <Link href='/'> Home </Link>
+            <Link href='/'> Home Page </Link>
           </li>
           { isLoggedIn ? (
             <li className='logo_text hover:text-gray-600'>
