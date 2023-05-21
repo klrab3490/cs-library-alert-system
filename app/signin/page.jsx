@@ -1,11 +1,13 @@
 "use client";
 
+import React from "react";
 import { auth,provider } from "@lib/firebase-config";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { FcGoogle } from "react-icons/fc";
 import { useRouter } from 'next/navigation';
 import { useAuthState } from "react-firebase-hooks/auth";
+import Link from "next/link";
 
 const page = () => {
   const router = useRouter();
@@ -18,15 +20,18 @@ const page = () => {
       })
       .catch((error) => {
         console.log(error);
-      });
+      })
   };
   const loginwithGoogle = async () => {
     await signInWithPopup(auth,provider);
   };
+  
   const [user,loading] = useAuthState(auth);
-  if (user) {
-    router.push('/');
-  }
+  useEffect(() => {
+    if (user) {
+      router.push('/');
+    }
+  },[user]);
 
   // user enter
   const [email, setEmail] = useState('');
@@ -40,7 +45,7 @@ const page = () => {
       <div className="form mt-5">
         <div className="flex-center flex-col">
           <h3>Sign In With</h3>
-          <button onClick={loginwithGoogle}> <FcGoogle /> </button>
+          <FcGoogle onClick={loginwithGoogle} /> 
         </div>
         <form>
           <div className="input">
@@ -51,10 +56,9 @@ const page = () => {
             <h3>Password : </h3>
             <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
           </div>
-          <div className="bottom flex-center">
-            <div className="button">
-              <button type="submit" onClick={signIn} >Login</button>
-            </div>
+          <div className="justify-items-between p-5">
+            <button type="submit" onClick={signIn} className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" > Login</button>
+            <Link href={'/signup'} className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" > Register </Link>
           </div>
         </form>
       </div>
