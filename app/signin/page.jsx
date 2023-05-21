@@ -27,19 +27,17 @@ const page = () => {
   };
   
   const [user,loading] = useAuthState(auth);
-  useEffect(() => {
-    if (user) {
-      router.push('/');
-    }
-  },[user]);
+  if (user) {
+    router.push('/');
+  };
 
   // user enter
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   return (
-    <div className=" align-middle justify-center p-5 mb-5">
-      <h1 className="head_text">
+    <div className=" align-middle justify-center p-5">
+      <h1 className="head_text flex-center">
         <span className=" orange_gradient text-center"> Login </span>
       </h1>
       <div className="form mt-5">
@@ -56,9 +54,17 @@ const page = () => {
             <h3>Password : </h3>
             <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
           </div>
-          <div className="justify-items-between p-5">
-            <button type="submit" onClick={signIn} className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" > Login</button>
-            <Link href={'/signup'} className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" > Register </Link>
+          <div className="p-5 flex-center">
+            <ul className="gap-4 flex">
+              <li>
+                <button type="submit" onClick={signIn} className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black"> Login</button>
+              </li>
+              <li>
+                <Link href={'/signup'}>
+                  <button type="submit" className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black"> Register </button>
+                </Link>
+              </li>
+            </ul>
           </div>
         </form>
       </div>
