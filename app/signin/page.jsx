@@ -1,23 +1,32 @@
 "use client";
 
-import { initFirebase } from "../../firebase/firebaseApp";
+import { auth,provider } from "@lib/firebase-config";
 import { useState } from "react";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { FcGoogle } from "react-icons/fc";
+import { useRouter } from 'next/navigation';
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const page = () => {
+  const router = useRouter();
   // Firebase
-  const app = initFirebase();
-  const auth = getAuth(app);
   const signIn = async () => {
     const result = await signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
+        console.log(user)
       })
       .catch((error) => {
         console.log(error);
       });
-    console.log(result.user);
   };
+  const loginwithGoogle = async () => {
+    await signInWithPopup(auth,provider);
+  };
+  const [user,loading] = useAuthState(auth);
+  if (user) {
+    router.push('/');
+  }
 
   // user enter
   const [email, setEmail] = useState('');
@@ -29,6 +38,10 @@ const page = () => {
         <span className=" orange_gradient text-center"> Login </span>
       </h1>
       <div className="form mt-5">
+        <div className="flex-center flex-col">
+          <h3>Sign In With</h3>
+          <button onClick={loginwithGoogle}> <FcGoogle /> </button>
+        </div>
         <form>
           <div className="input">
             <h3>Email ID: </h3>
