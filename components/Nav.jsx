@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { signOut } from "firebase/auth";
 import { auth } from "@lib/firebase-config";
@@ -22,6 +22,12 @@ const Nav = () => {
     router.push("/");
   };
   const[isLoggedIn,loading] = useAuthState(auth);
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      router.push('/');
+    }
+  })
 
   return (
     <nav className="flex-between w-full mb-3 pt-3">
