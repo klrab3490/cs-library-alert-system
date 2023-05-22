@@ -22,7 +22,6 @@ const Nav = () => {
     router.push("/");
   };
   const[isLoggedIn,loading] = useAuthState(auth);
-
   useEffect(() => {
     if (!isLoggedIn) {
       router.push('/');
@@ -69,7 +68,8 @@ const Nav = () => {
       <div onClick={handleNav} className='block sm:hidden z-10 hover:text-gray-600'>
         { nav 
           ? <AiOutlineClose size={20} /> 
-          : <AiOutlineMenu size={20} />}
+          : <AiOutlineMenu size={20} />
+        }
       </div>
 
       {/* Mobile Menu */}
@@ -96,7 +96,7 @@ const Nav = () => {
           ) }
           { isLoggedIn ? (
             <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
-              <button onClick={logout} className="outline rounded px-2 py-1" > LogOut </button>
+              <button onClick={logout} className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" > LogOut </button>
             </li>
           ) : (
             <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
