@@ -54,8 +54,8 @@ const Nav = () => {
             </li>
           ) }
           { isLoggedIn ? (
-            <li className='logo_text hover:text-gray-600'>
-              <button onClick={logout} className="outline rounded px-2" > LogOut </button>
+            <li className='logo_text bg-black text-gray-100 hover:bg-white'>
+              <button onClick={logout} className="outline rounded px-2 text-white hover:text-black" > LogOut </button>
             </li>
           ) : (
             <li className='logo_text bg-black text-gray-100 hover:bg-white'>
