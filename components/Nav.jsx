@@ -22,11 +22,6 @@ const Nav = () => {
     router.push("/");
   };
   const[isLoggedIn,loading] = useAuthState(auth);
-  useEffect(() => {
-    if (!isLoggedIn) {
-      router.push('/');
-    }
-  })
 
   return (
     <nav className="flex-between w-full mb-3 pt-3">
