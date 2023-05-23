@@ -1,10 +1,15 @@
+'use client';
+
 import Link from "next/link";
 import { MdDashboard } from "react-icons/md";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "@lib/firebase-config";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const UserNav = () => {
+    const router = useRouter();
+
     const[isLoggedIn,loading] = useAuthState(auth);
     useEffect(() => {
       if (!isLoggedIn) {
