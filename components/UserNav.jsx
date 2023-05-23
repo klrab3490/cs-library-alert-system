@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { MdDashboard } from "react-icons/md";
+import { IoMdNotifications } from "react-icons/io";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "@lib/firebase-config";
 import { useEffect } from "react";
@@ -26,6 +28,18 @@ const UserNav = () => {
                             Dashboard
                         </Link>
                     </li>
+                    <li className="logo_text hover:text-gray-600">
+                        <Link href={'/users/notification'} className="flex">
+                            <IoMdNotifications className="icon" />
+                            Notifications
+                        </Link>
+                    </li>
+                    <li className="logo_text hover:text-gray-600">
+                        <Link href={'/users/cart'} className="flex">
+                            <AiOutlineShoppingCart className='icon' />
+                            Cart
+                        </Link>
+                    </li>
                 </ul>
             </div>
             <div className="w-full">
@@ -36,6 +50,22 @@ const UserNav = () => {
                                 <Link href='/users'>
                                     <MdDashboard className="flex-col" />
                                     Dashboard
+                                </Link> 
+                            </center>
+                        </li>
+                        <li>
+                            <center>
+                                <Link href={'/users/notification'}>
+                                    <IoMdNotifications className="flex-col" />
+                                    Notification
+                                </Link> 
+                            </center>
+                        </li>
+                        <li>
+                            <center>
+                                <Link href={"/users/cart"}>
+                                    <AiOutlineShoppingCart className="flex-col" />
+                                    Cart
                                 </Link> 
                             </center>
                         </li>
