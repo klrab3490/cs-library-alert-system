@@ -5,7 +5,7 @@ import { MdDashboard } from "react-icons/md";
 import { IoMdNotifications } from "react-icons/io";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "@lib/firebase-config";
+import { auth } from "@lib/firebase.config";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 

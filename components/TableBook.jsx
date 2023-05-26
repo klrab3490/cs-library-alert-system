@@ -37,7 +37,7 @@ const TableBook = () => {
       renderCell: (params) => {
         return (
           <div className='flex justify-between'>
-            <Link className='' href={'/admin/books/'}> View </Link>
+            <Link href={'/admin/books/${params.row.id}'}> View </Link>
             <button className='' type='button' onClick={() => handleDelete(params.row.id)}> Delete </button>
           </div>
         );

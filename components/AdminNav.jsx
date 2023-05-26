@@ -5,7 +5,7 @@ import { MdDashboard } from "react-icons/md";
 import { AiOutlineUser } from "react-icons/ai";
 import { TbBooks } from "react-icons/tb";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "@lib/firebase-config";
+import { auth } from "@lib/firebase.config";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
