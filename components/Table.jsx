@@ -73,7 +73,10 @@ const Table2 = ({ type }) => {
               <TableCell>{row.id}.</TableCell>
               <TableCell>{row.name}</TableCell>
               <TableCell align='center'>{row.status}</TableCell>
-              <TableCell align='center'>{row.settig}</TableCell>
+              <TableCell align='center'>
+                <div className="view"></div>
+                <div className="delete"></div>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
