@@ -42,7 +42,7 @@ const TableBook = () => {
     {
       field: "action",
       headerName: "Action",
-      width: 150,
+      width: 170,
       renderCell: (params) => {
         return (
           <div className='self-center flex items-center gap-2 font-bold'>
@@ -63,7 +63,7 @@ const TableBook = () => {
       <div className="" >
         <DataGrid 
           rows={data}
-          sx={{ width: { xs:320, sm:600, md:600, lg:700, xl:900,} }}
+          sx={{ width: { xs:320, sm:600, md:600, lg:700, xl:700,} }}
           columns={userColumns.concat(actionColumn)}
           initialState={{
             pagination: {

@@ -67,7 +67,6 @@ const TableUser = () => {
     <div className="datatable py-3">
       <div className="justify-between flex mb-3">
         <div className="self-center text-xl font-semibold">User Data</div>
-        <button type='button' className='self-center bg-white font-bold border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white hover:outline-cyan-500 rounded border-2 px-3 py-1'><Link href={'/admin/users/adduser'}> Add New User </Link></button>
       </div>
       <div className="" >
         <DataGrid 
