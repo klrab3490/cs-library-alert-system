@@ -11,7 +11,6 @@ import { useRouter } from "next/navigation";
 
 const AdminNav = () => {
     const router = useRouter();
-
     const[isLoggedIn,loading] = useAuthState(auth);
     useEffect(() => {
       if (!isLoggedIn) {

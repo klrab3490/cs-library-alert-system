@@ -1,9 +1,9 @@
-import Table2 from "@components/Table";
+import TableUser from "@components/TableUser";
 
 const page = () => {
   return (
     <div className="flex-center p-0">
-      <Table2 className="flex-center" type="user" />
+      <TableUser className="flex-center" />
     </div>
   )
 }

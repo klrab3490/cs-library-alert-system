@@ -103,7 +103,7 @@ const Nav = () => {
             </li>
           ) : (
             <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
-              <Link href={'/signin'} className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" > Login </Link>
+              <button onClick={loginwithGoogle} className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" > Login </button>
             </li>
           ) }
         </ul>
