@@ -1,4 +1,13 @@
+'use client'
+
 import Widget from "@components/widget";
+import { useSession } from "next-auth/react";
+
+const ClientProtectedPage = () => {
+  const {data: session} = useSession({
+    required: true,
+  })
+};
 
 const page = () => {
   return (
@@ -12,6 +21,6 @@ const page = () => {
       </div>
     </div>
   )
-}
+};
 
 export default page;

@@ -1,5 +1,12 @@
 import React from 'react'
 
+const ClientProtectedPage = () => {
+  const {data: session} = useSession({
+    required: true,
+  })
+};
+
+
 const page = () => {
   return (
     <div >
