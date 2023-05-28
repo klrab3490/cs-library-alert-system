@@ -21,13 +21,7 @@ const Nav = () => {
     await signOut(auth);
     router.push("/");
   };
-  const[isLoggedIn,loading] = useAuthState(auth);
-  useEffect(() => {
-    if (!isLoggedIn) {
-      router.push("/")
-    }
-  })
-
+  
   return (
     <nav className="flex-between w-full mb-3 pt-3">
       <Link href='/' className="flex gap-4 flex-center">
