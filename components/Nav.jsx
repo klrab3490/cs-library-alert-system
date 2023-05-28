@@ -17,9 +17,6 @@ const Nav = () => {
   };
 
   // Firebase
-  const loginwithGoogle = async () => {
-    await signInWithPopup(auth,provider);
-  };
   const logout = async () => {
     await signOut(auth);
     router.push("/");
@@ -61,7 +58,9 @@ const Nav = () => {
             </li>
           ) : (
             <li className='logo_text bg-black text-gray-100 hover:bg-white'>
-              <button onClick={loginwithGoogle} className="outline rounded px-2 text-white hover:text-black" > Login </button>
+              <button className="outline rounded px-2 text-white hover:text-black" >
+                <Link href={'/login'}> Login </Link>
+              </button>
             </li>
           ) }
         </ul>
@@ -102,8 +101,10 @@ const Nav = () => {
               <button onClick={logout} className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" > LogOut </button>
             </li>
           ) : (
-            <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
-              <button onClick={loginwithGoogle} className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" > Login </button>
+            <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}> 
+              <button className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" >
+                <Link href={'/login'}> Login </Link>
+              </button>
             </li>
           ) }
         </ul>
