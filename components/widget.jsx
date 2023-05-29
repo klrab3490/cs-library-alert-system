@@ -13,18 +13,18 @@ const Widget = ( {type} ) => {
         case "user":
             data = {
                 title: "USERS",
-                link: (<Link href='/admin/users'>See all users</Link>),
+                link: (<Link href='/admin/users' className="hover:text-blue-500">See all users</Link>),
                 icon: (
-                    <AiOutlineUser className="icon" />
+                    <AiOutlineUser className="icon" size={40} />
                 ),
             };
             break;
             case "books":
                 data = {
                     title: "BOOKS",
-                    link: (<Link href='/admin/books'>See all books</Link>),
+                    link: (<Link href='/admin/books' className="hover:text-blue-500">See all books</Link>),
                     icon: (
-                        <TbBooks className="icon" />
+                        <TbBooks className="icon" size={40} />
                     ),
                 };
                 break;

@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { signInWithPopup, signOut } from "firebase/auth";
-import { auth, provider } from "@lib/firebase.config";
+import { signOut } from "firebase/auth";
+import { auth } from "@lib/firebase.config";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from 'next/navigation';
 
@@ -36,15 +36,19 @@ const Nav = () => {
               <Link href='/admin'> Admin-Panel </Link>
             </li>
           ) : (
-            <li className='logo_text hover:text-gray-600'></li>
+            <li className='logo_text hover:text-gray-600'>
+              <Link href='/'> Home </Link>
+            </li>
           ) }
           { isLoggedIn ? (
             <li className='logo_text hover:text-gray-600'>
               <Link href='/users'> User-Panel </Link>
             </li>
           ) : (
-            <li className='logo_text hover:text-gray-600'>
-              <Link href='/'> Home </Link>
+            <li className='logo_text bg-black text-gray-100 hover:bg-white'>
+              <button className="outline rounded px-2 text-white hover:text-black" >
+                <Link href={'/register'}> Register </Link>
+              </button>
             </li>
           ) }
           { isLoggedIn ? (
@@ -76,19 +80,23 @@ const Nav = () => {
           : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white text-center ease-in duration-300'} >
         <ul className='sm:flex font-satoshi font-semibold'>
         { isLoggedIn ? (
-            <li className='p-4 text-4xl hover:text-gray-600'>
-              <Link href='/admin' onClick={handleNav}> Admin-Panel </Link>
+            <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
+              <Link href='/admin'> Admin-Panel </Link>
             </li>
           ) : (
-            <li className='p-4 text-4xl hover:text-gray-600'></li>
+            <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
+                <Link href='/'> Home </Link>
+              </li>
           ) }
           { isLoggedIn ? (
-            <li className='p-4 text-4xl hover:text-gray-600'>
-              <Link href='/users' onClick={handleNav}> User-Panel </Link>
+            <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
+              <Link href='/users'> User-Panel </Link>
             </li>
           ) : (
-            <li className='p-4 text-4xl hover:text-gray-600'>
-              <Link href='/'> Home </Link>
+            <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}> 
+              <button className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" >
+                <Link href={'/register'}> Register </Link>
+              </button>
             </li>
           ) }
           { isLoggedIn ? (
