@@ -25,11 +25,9 @@ const page = () => {
     setData({...data, [id]:value})
   };
 
+  // console.log(data);
 
-  console.log(data);
-
-  const handleAdd = async(e) => {
-    e.preventDefault();
+  const handleAdd = async() => {
     try {
       const result = await createUserWithEmailAndPassword(auth,data.email,data.password);
       await setDoc(doc(db,"Users",result.user.uid),{
@@ -62,7 +60,9 @@ const page = () => {
                 </div>
                 ))}
               </div>
-              <button type='submit' className='button' > Send </button>
+              <div className="p-2 flex-center">
+                <button type='submit' className='button' > Send </button>
+              </div>
             </form>
           </div>
         </div>

@@ -28,10 +28,10 @@ const TableBook = () => {
   },[]);
 
   const userColumns = [
-    { field: "book", headerName:"Book Name", width: 150},
+    { field: "book", headerName:"Book Name", width: 350},
     { field: "author", headerName:"Author", width: 100},
     { field: "available", headerName:"Available Book", width: 110},
-    { field: "total", headerName:"Total Book Number", width: 110},
+    { field: "total", headerName:"Total Book Number", width: 150},
   ];
 
   const handleDelete = async (id) => {
@@ -51,7 +51,7 @@ const TableBook = () => {
       renderCell: (params) => {
         return (
           <div className='self-center flex items-center gap-2 font-bold'>
-            <button className='bg-white border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white hover:outline-cyan-500 rounded border-2 px-3 py-1' type='button'> <Link href={'/admin/books/$params.row.id'}> Edit </Link> </button>
+            {/* <button className='bg-white border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white hover:outline-cyan-500 rounded border-2 px-3 py-1' type='button'> <Link href={'/admin/books/$params.row.id'}> Edit </Link> </button> */}
             <button className='bg-white border-red-500 text-red-500 hover:bg-red-500 hover:text-white hover:outline-red-500 rounded border-2 px-3 py-1' type='button' onClick={() => handleDelete(params.row.id)}> Delete </button>
           </div>
         );
@@ -68,7 +68,7 @@ const TableBook = () => {
       <div className="" >
         <DataGrid 
           rows={data}
-          sx={{ width: { xs:320, sm:600, md:600, lg:700, xl:700,} }}
+          sx={{ width: { xs:320, sm:600, md:700, lg:910, xl:910,} }}
           columns={userColumns.concat(actionColumn)}
           initialState={{
             pagination: {

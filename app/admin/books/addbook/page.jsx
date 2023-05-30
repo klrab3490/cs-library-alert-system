@@ -1,20 +1,36 @@
 'use client';
 
 import { db } from '@lib/firebase.config';
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import { ImBooks } from "react-icons/im";
 
 const page = () => {
+  const [data,setData] = useState({});
   const router = useRouter();
-  const handleAdd = async(e) => {
+  
+  const userInputs = [
+    {id:"book", label:"Book Name : ", type:"text", placeholder:"Enter Book Name"}, 
+    {id:"author", label:"Author's Name : ", type:"text", placeholder:"Enter Author's Name"}, 
+    {id:"available", label:"Available Book Number : ", type:"text", placeholder:"Enter Available Book Number"}, 
+    {id:"total", label:"Total Number Of Books : ", type:"text", placeholder:"Enter Total Number Of This Books"}, 
+  ];
+
+  const handleInputs = (e) => {
     e.preventDefault();
-    await addDoc(collection(db,"Books"),{
-      book: "ABC",
-      author: "abc",
-      available: 1,
-      total: 3
-    });
+    const id = e.target.id;
+    const value = e.target.value;
+    setData({...data, [id]:value})
+  };
+
+  const handleAdd = async() => {
+    try {
+      await addDoc(collection(db,"Books"),{
+        ...data,
+        timeStamp: serverTimestamp()
+      });
+    } catch (error) { console.log(error);}
     router.push("/admin/books");
   }
 
@@ -22,7 +38,7 @@ const page = () => {
     <div className="new">
       <div className="newContainer">
         <div className="top flex">
-          <h1 className='h1 justify-center'> Add New User </h1>
+          <h1 className='h1 justify-center'> Add New Book </h1>
         </div>
         <div className="bottom">
           <div className="left flex-center">
@@ -31,24 +47,16 @@ const page = () => {
           <div className="right">
             <form onSubmit={handleAdd}>
               <div className="form">
-                <div className="formInput">
-                  <label className='label'> Book Name : </label>
-                  <input className='input' type="text" placeholder='Enter Book Name' />
+                {userInputs.map((input) => (
+                  <div className="formInput" key={input.id}>
+                    <label className='label'>{input.label}</label>
+                    <input className='input' id={input.id} type={input.type} placeholder={input.placeholder} onChange={handleInputs} />
                 </div>
-                <div className="formInput">
-                  <label className='label'> Author's Name : </label>
-                  <input className='input' type="name" placeholder="Enter Author's Name" />
-                </div>
-                <div className="formInput">
-                  <label className='label'> Total Copies : </label>
-                  <input className='input' type="text" placeholder='Enter Quantity' />
-                </div>
-                <div className="formInput">
-                  <label className='label'> Available Copies  : </label>
-                  <input className='input' type="text" placeholder='Enter Quantity' />
-                </div>
+                ))}
               </div>
-              <button type='submit' className='button' > Send </button>
+              <div className="p-2 flex-center">
+                <button type='submit' className='button' > Send </button>
+              </div>
             </form>
           </div>
         </div>

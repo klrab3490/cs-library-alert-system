@@ -1,5 +1,5 @@
 import Provider from '@components/Provider';
-import '@styles/user.modules.css'
+import '@styles/user.modules.css';
 
 const AddbookLayout = ({ children }) => {
     return (
