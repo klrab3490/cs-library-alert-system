@@ -1,41 +1,46 @@
 'use client';
 
-import * as React from 'react';
 import Link from 'next/link';
 import { DataGrid } from '@mui/x-data-grid';
 import { useState } from 'react';
+import { collection, deleteDoc, doc, getDocs, onSnapshot } from 'firebase/firestore';
+import { db } from '@lib/firebase.config';
+import { useEffect } from 'react';
 
 const TableBook = () => {
-  
-    const userColumns = [
-      { field: "id", headerName:"Book ID", width: 80 },
-      { field: "name", headerName:"Book Name", width: 150},
-      { field: "status", headerName:"Available", width: 100},
-      { field: "settig", headerName:"Total Quantity", width: 110},
-    ];
+  const [data, setData] = useState([]);
 
-    const rows = [
-      {id:1, name:"A", status:5, settig:10 },
-      {id:2, name:"Aa", status:15, settig:20 },
-      {id:3, name:"AB", status:25, settig:30 },
-      {id:4, name:"Ab", status:35, settig:40 },
-      {id:5, name:"AC", status:45, settig:50 },
-      {id:6, name:"Ac", status:55, settig:60 },
-      {id:7, name:"AD", status:65, settig:70 },
-      {id:8, name:"Ad", status:75, settig:80 },
-      {id:9, name:"AE", status:85, settig:90 },
-      {id:10, name:"Ae", status:95, settig:100 },
-      {id:11, name:"AF", status:105, settig:110 },
-      {id:12, name:"Af", status:115, settig:120 },
-      {id:13, name:"Ae", status:125, settig:130 },
-      {id:14, name:"AG", status:135, settig:140 },
-      {id:15, name:"Ag", status:145, settig:150 },
-    ];
-  
+  useEffect(() => {
+    const unsub = onSnapshot(collection(db,"Books"),(snapShot) => {
+      let list = [];
+      snapShot.docs.forEach(doc => {
+        list.push({id:doc.id, ...doc.data()});
+      });
+      setData(list);
+    },
+    (error) => {
+      console.log(error);
+    });
 
-  const [data, setData] = useState(rows);
-  const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
+    return () => {
+      unsub();
+    }
+  },[]);
+
+  const userColumns = [
+    { field: "book", headerName:"Book Name", width: 150},
+    { field: "author", headerName:"Author", width: 100},
+    { field: "available", headerName:"Available Book", width: 110},
+    { field: "total", headerName:"Total Book Number", width: 110},
+  ];
+
+  const handleDelete = async (id) => {
+    try {
+      await deleteDoc(doc(db,"Books",id));
+      setData(data.filter((item) => item.id !== id));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const actionColumn = [
