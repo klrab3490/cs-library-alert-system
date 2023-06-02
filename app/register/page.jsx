@@ -1,52 +1,72 @@
 'use client';
 
-import React, { useState } from 'react';
-import { auth } from '@lib/firebase.config';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
+import { auth, db } from '@lib/firebase.config';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { doc, serverTimestamp, setDoc } from 'firebase/firestore';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import { ImUserPlus } from "react-icons/im";
 
 const page = () => {
-    const router = useRouter();
-    const [error, setError] = useState(false);
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+  const [data,setData] = useState({});
+  const router = useRouter();
 
-    const handleLogin = (e) => {
-        e.preventDefault();
-        createUserWithEmailAndPassword(auth,email,password)
-        .then((userCredential) => {
-            const user = userCredential.user;
-            console.log(user);
-            router.push('/');
-        })
-        .catch((error) => {
-            setError(true);
-        })
+  const userInputs = [
+    {id:"name", label:"Name : ", type:"text", placeholder:"Enter Full Name"}, 
+    {id:"email", label:"Email ID : ", type:"email", placeholder:"Enter Email ID"}, 
+    {id:"password", label:"Password : ", type:"password", placeholder:"Enter Password"}, 
+  ];
+
+  const handleInputs = (e) => {
+    e.preventDefault();
+    const id = e.target.id;
+    const value = e.target.value;
+    setData({...data, [id]:value})
+  };
+
+  // console.log(data);
+
+  const handleAdd = async(e) => {
+    e.preventDefault();
+    try {
+      const result = await createUserWithEmailAndPassword(auth,data.email,data.password);
+      await setDoc(doc(db,"Users",result.user.uid),{
+        ...data,
+        usertype: "User",
+        timeStamp: serverTimestamp()
+      });
+      router.push("/");
+    } catch (error) { 
+      console.log(error);
     }
-    
-    return (
-        <div className='login'>
-            <form onSubmit={handleLogin}>
-                <h3> Register With </h3>
-                <div>
-                    <h3>Email:</h3>
-                    <input type="email" placeholder='Email' onChange={e=>setEmail(e.target.value)}/>
+  }
+
+  return (
+    <div className="new">
+      <div className="newContainer">
+        <div className="bottom">
+          <div className="left flex-center">
+            <ImUserPlus size={100} className='' />
+          </div>
+          <div className="right">
+            <form onSubmit={handleAdd}>
+              <div className="form">
+                {userInputs.map((input) => (
+                  <div className="formInput" key={input.id}>
+                    <label className='label'>{input.label}</label>
+                    <input className='input' id={input.id} type={input.type} placeholder={input.placeholder} onChange={handleInputs} />
                 </div>
-                <div>
-                    <h3>Password:</h3>
-                    <input type="password" placeholder='Password' onChange={e=>setPassword(e.target.value)}/>
-                </div>
-                <div className='gap-2'>
-                    <button type='submit' className=' bg-blue-600 text-white'> Register </button>
-                    <button type='submit' className=' bg-blue-300 text-blue-950'>
-                        <Link href={'/login'}> Login </Link>
-                    </button>
-                </div>
-                {error && <span> User Already Exist </span>}
+                ))}
+              </div>
+              <div className="p-2 flex-center">
+                <button type='submit' className='mt-2 font-bold p-4 bg-teal-500 text-white' > Send </button>
+              </div>
             </form>
+          </div>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
 export default page;

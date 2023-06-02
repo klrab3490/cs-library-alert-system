@@ -1,5 +1,5 @@
 import Provider from '@components/Provider';
-import 'styles/login.modules.css';
+import '@styles/user.modules.css';
 
 const RegisterLayout = ({ children }) => {
     return (

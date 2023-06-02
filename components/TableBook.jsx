@@ -51,7 +51,7 @@ const TableBook = () => {
       renderCell: (params) => {
         return (
           <div className='self-center flex items-center gap-2 font-bold'>
-            {/* <button className='bg-white border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white hover:outline-cyan-500 rounded border-2 px-3 py-1' type='button'> <Link href={'/admin/books/$params.row.id'}> Edit </Link> </button> */}
+            <button className='bg-white border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white hover:outline-cyan-500 rounded border-2 px-3 py-1' type='button'> <Link href={'/admin/books/${params.row.uid}'}> Edit </Link> </button>
             <button className='bg-white border-red-500 text-red-500 hover:bg-red-500 hover:text-white hover:outline-red-500 rounded border-2 px-3 py-1' type='button' onClick={() => handleDelete(params.row.id)}> Delete </button>
           </div>
         );

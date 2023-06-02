@@ -27,7 +27,8 @@ const page = () => {
 
   // console.log(data);
 
-  const handleAdd = async() => {
+  const handleAdd = async(e) => {
+    e.preventDefault();
     try {
       const result = await createUserWithEmailAndPassword(auth,data.email,data.password);
       await setDoc(doc(db,"Users",result.user.uid),{
@@ -44,7 +45,7 @@ const page = () => {
     <div className="new">
       <div className="newContainer">
         <div className="top flex">
-          <h1 className='h1 justify-center'> Add New User </h1>
+          <h1 className='h1 justify-center text-center'> Add New User </h1>
         </div>
         <div className="bottom">
           <div className="left flex-center">

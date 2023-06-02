@@ -24,7 +24,8 @@ const page = () => {
     setData({...data, [id]:value})
   };
 
-  const handleAdd = async() => {
+  const handleAdd = async(e) => {
+    e.preventDefault();
     try {
       await addDoc(collection(db,"Books"),{
         ...data,
@@ -38,7 +39,7 @@ const page = () => {
     <div className="new">
       <div className="newContainer">
         <div className="top flex">
-          <h1 className='h1 justify-center'> Add New Book </h1>
+          <h1 className='h1 justify-center text-center'> Add New Book </h1>
         </div>
         <div className="bottom">
           <div className="left flex-center">

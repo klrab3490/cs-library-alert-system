@@ -5,7 +5,6 @@ import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, provider } from '@lib/firebase.config';
 import { useRouter } from 'next/navigation';
 import { FcGoogle } from "react-icons/fc";
-import Link from 'next/link';
 
 const page = () => {
     const router = useRouter();
@@ -48,9 +47,6 @@ const page = () => {
                 </div>
                 <div className='gap-2'>
                     <button type='submit' className=' bg-blue-600 text-white'> Login </button>
-                    <button type='submit' className=' bg-blue-300  text-blue-950'>
-                        <Link href={'/register'}> Register </Link>
-                    </button>
                 </div>
                 {error && <span> Wrong Email Or Password </span>}
             </form>
