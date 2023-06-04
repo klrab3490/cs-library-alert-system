@@ -1,3 +1,7 @@
+'use client';
+
+
+import SearchTable from '@components/SearchTable';
 import React from 'react'
 
 const ClientProtectedPage = () => {
@@ -9,8 +13,8 @@ const ClientProtectedPage = () => {
 
 const page = () => {
   return (
-    <div >
-      <h1 className='font-satoshi font-semibold flex-center'> User Dashboard </h1>
+    <div className='flex-center'>
+      <SearchTable />
     </div>
   )
 }

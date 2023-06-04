@@ -1,22 +1,29 @@
 'use client';
 
-import Link from 'next/link';
 import { DataGrid } from '@mui/x-data-grid';
 import { useState } from 'react';
-import { collection, getDocs, onSnapshot, query, where } from 'firebase/firestore';
-import { db } from '@lib/firebase.config';
+import { collection, doc, onSnapshot, serverTimestamp, setDoc } from 'firebase/firestore';
+import { auth, db } from '@lib/firebase.config';
 import { useEffect } from 'react';
 
 const SearchTable = () => {
+    
     const [search, setSearch] = useState("");
     const [data, setData] = useState([]);
 
     const userColumns = [
         { field: "book", headerName:"Book Name", width: 350},
-        { field: "author", headerName:"Author", width: 100},
-        { field: "available", headerName:"Available Book", width: 110},
-        { field: "total", headerName:"Total Book Number", width: 150},
+        { field: "author", headerName:"Author", width: 300},
     ];
+
+    const addcart = async(data) => {
+        const [value,setValue] = useState({});
+        setValue(data)
+        await setDoc(doc(db,"Cart",uid),{
+            ...value,
+            timeStamp: serverTimestamp()
+        });
+    }
    
     const actionColumn = [
         {
@@ -27,7 +34,7 @@ const SearchTable = () => {
                 return (
                 <div className='self-center flex items-center gap-2 font-bold'>
                     <button className='bg-white border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white hover:outline-cyan-500 rounded border-2 px-3 py-1' type='button'> Whislist </button>
-                    <button className='bg-white border-red-500 text-red-500 hover:bg-red-500 hover:text-white hover:outline-red-500 rounded border-2 px-3 py-1' type='button'> Cart </button>
+                    <button className='bg-white border-red-500 text-red-500 hover:bg-red-500 hover:text-white hover:outline-red-500 rounded border-2 px-3 py-1' type='button' onClick={addcart(params.row.data())}> Cart </button>
                 </div>
                 );
             },
@@ -35,22 +42,21 @@ const SearchTable = () => {
     ];
 
     useEffect(() => {
-        const q = query(collection(db,"Books"), where("book","==",search))
-        const unsub = onSnapshot(q,(snapShot) => {
+        const unsub = onSnapshot(collection(db,"Books"),(snapShot) => {
             let list = [];
             snapShot.docs.forEach(doc => {
-              list.push({id:doc.id, ...doc.data()});
+                list.push({id:doc.id, ...doc.data()});
             });
             setData(list);
         },
         (error) => {
             console.log(error);
         });
-      
+    
         return () => {
             unsub();
         }
-    },[search]);
+      },[]);
 
     return (
         <div className="datatable py-3">

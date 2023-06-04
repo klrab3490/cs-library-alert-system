@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, provider } from '@lib/firebase.config';
 import { useRouter } from 'next/navigation';
@@ -17,7 +17,7 @@ const page = () => {
         signInWithEmailAndPassword(auth,email,password)
         .then((userCredential) => {
             const user = userCredential.user;
-            console.log(user);
+            console.log(user.uid);
             router.push('/');
         })
         .catch((error) => {
@@ -25,7 +25,11 @@ const page = () => {
         })
     }
     const loginwithGoogle = async() => {
-        await signInWithPopup(auth,provider);
+        await signInWithPopup(auth,provider)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user.uid);
+        })
         router.push('/');
     }
 
