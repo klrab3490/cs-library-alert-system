@@ -24,7 +24,7 @@ const Nav = () => {
   const[isLoggedIn,loading] = useAuthState(auth);
 
   return (
-    <nav className="flex-between w-full mb-3 pt-3">
+    <nav style={{zIndex: "12 !important"}} className="flex-between w-full mb-3 pt-3">
       <Link href='/' className="flex gap-4 flex-center">
         <Image src="/assets/images/aces.svg" width={90} height={70} alt="logo" className="object-contain" />
         <p className="logo_text">CS Library Alert System</p>
