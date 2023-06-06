@@ -1,7 +1,7 @@
 'use client';
 
 
-import SearchTable from '@components/SearchTable';
+import SearchTableBook from '@components/SearchTableBook';
 import React from 'react'
 
 const ClientProtectedPage = () => {
@@ -14,7 +14,7 @@ const ClientProtectedPage = () => {
 const page = () => {
   return (
     <div className='flex-center'>
-      <SearchTable />
+      <SearchTableBook />
     </div>
   )
 }

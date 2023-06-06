@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { DataGrid } from '@mui/x-data-grid';
 import { useState } from 'react';
-import { collection, deleteDoc, doc, getDocs, onSnapshot } from 'firebase/firestore';
+import { collection, deleteDoc, doc, onSnapshot } from 'firebase/firestore';
 import { db } from '@lib/firebase.config';
 import { useEffect } from 'react';
 
