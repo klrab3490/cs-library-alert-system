@@ -2,9 +2,11 @@
 
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import { auth, provider } from '@lib/firebase.config';
+import { auth, db, provider } from '@lib/firebase.config';
 import { useRouter } from 'next/navigation';
 import { FcGoogle } from "react-icons/fc";
+import { collection, doc, getDoc } from 'firebase/firestore';
+import { signOut } from 'next-auth/react';
 
 const page = () => {
     const router = useRouter();
@@ -12,23 +14,56 @@ const page = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleLogin = (e) => {
+    const handleLogin = async(e) => {
         e.preventDefault();
-        signInWithEmailAndPassword(auth,email,password)
-        .then((userCredential) => {
-            const user = userCredential.user;
-            console.log(user.uid);
-            router.push('/');
-        })
-        .catch((error) => {
-            setError(true);
-        })
+        try {
+            await signInWithEmailAndPassword(auth,email,password)
+            .then(async (userCredential) => {
+                    const user = userCredential.user;
+                    const docRef = doc(db,"Users",user.uid);
+                    const docSnap = await getDoc(docRef);
+                    if (docSnap.exists()) {
+                        const userData = docSnap.data();
+                        const userType = userData.usertype;
+                        if (userType=="Admin") {
+                            router.push('/admin');
+                        }
+                        else if (userType=="User") {
+                            router.push('/users');
+                        } else {
+                            await signOut(auth);
+                            router.push('/register');
+                        }
+                    }
+            })
+            .catch((error) => {
+                setError(true);
+            });
+                        
+        } catch (error) {
+            console.log("try error")
+        }
+        
     }
     const loginwithGoogle = async() => {
         await signInWithPopup(auth,provider)
-        .then((userCredential) => {
+        .then(async (userCredential) => {
             const user = userCredential.user;
-            console.log(user.uid);
+            const docRef = doc(db,"Users",user.uid);
+            const docSnap = await getDoc(docRef);
+            if (docSnap.exists()) {
+                const userData = docSnap.data();
+                const userType = userData.usertype;
+                if (userType=="Admin") {
+                    router.push('/admin');
+                }
+                else if (userType=="User") {
+                    router.push('/users');
+                } else {
+                    await signOut(auth);
+                    router.push('/register');
+                }
+            }
         })
         router.push('/');
     }

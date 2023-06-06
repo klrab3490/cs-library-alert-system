@@ -33,7 +33,6 @@ const Nav = () => {
         <ul className='hidden sm:flex gap-4'>
         { isLoggedIn ? (
             <li className='logo_text hover:text-gray-600'>
-              <Link href='/admin'> Admin-Panel </Link>
             </li>
           ) : (
             <li className='logo_text hover:text-gray-600'>
@@ -42,7 +41,6 @@ const Nav = () => {
           ) }
           { isLoggedIn ? (
             <li className='logo_text hover:text-gray-600'>
-              <Link href='/users'> User-Panel </Link>
             </li>
           ) : (
             <li className='logo_text bg-black text-gray-100 hover:bg-white'>
@@ -81,16 +79,14 @@ const Nav = () => {
         <ul className='sm:flex font-satoshi font-semibold'>
         { isLoggedIn ? (
             <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
-              <Link href='/admin'> Admin-Panel </Link>
             </li>
           ) : (
             <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
-                <Link href='/'> Home </Link>
-              </li>
+              <Link href='/'> Home </Link>
+            </li>
           ) }
           { isLoggedIn ? (
             <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
-              <Link href='/users'> User-Panel </Link>
             </li>
           ) : (
             <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}> 
