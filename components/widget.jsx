@@ -1,13 +1,9 @@
 import { AiOutlineUser } from "react-icons/ai";
 import { TbBooks } from "react-icons/tb";
-import { MdKeyboardArrowUp,MdKeyboardArrowDown } from "react-icons/md";
 import Link from "next/link";
 
 const Widget = ( {type} ) => {
     let data;
-
-    const amount=100;
-    const diff=100;
 
     switch (type) {
         case "user":

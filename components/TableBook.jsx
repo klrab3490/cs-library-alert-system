@@ -30,7 +30,7 @@ const TableBook = () => {
   const userColumns = [
     { field: "book", headerName:"Book Name", width: 350},
     { field: "author", headerName:"Author", width: 100},
-    { field: "available", headerName:"Available Book", width: 110},
+    { field: "total", headerName:"Available Book", width: 110},
     { field: "total", headerName:"Total Book Number", width: 150},
   ];
 
