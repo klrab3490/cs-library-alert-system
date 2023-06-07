@@ -31,34 +31,26 @@ const Nav = () => {
       </Link>
       <div className="justify-left">
         <ul className='hidden sm:flex gap-4'>
-        { isLoggedIn ? (
-            <li className='logo_text hover:text-gray-600'>
-            </li>
-          ) : (
-            <li className='logo_text hover:text-gray-600'>
-              <Link href='/'> Home </Link>
-            </li>
-          ) }
-          { isLoggedIn ? (
-            <li className='logo_text hover:text-gray-600'>
-            </li>
-          ) : (
-            <li className='logo_text bg-black text-gray-100 hover:bg-white'>
-              <button className="outline rounded px-2 text-white hover:text-black" >
-                <Link href={'/register'}> Register </Link>
-              </button>
-            </li>
-          ) }
           { isLoggedIn ? (
             <li className='logo_text bg-black text-gray-100 hover:bg-white'>
               <button onClick={logout} className="outline rounded px-2 text-white hover:text-black" > LogOut </button>
             </li>
           ) : (
-            <li className='logo_text bg-black text-gray-100 hover:bg-white'>
-              <button className="outline rounded px-2 text-white hover:text-black" >
-                <Link href={'/login'}> Login </Link>
-              </button>
-            </li>
+            <>
+              <li className='logo_text hover:text-gray-600'>
+                <Link href='/'> Home </Link>
+              </li>
+              <li className='logo_text bg-black text-gray-100 hover:bg-white'>
+                  <button className="outline rounded px-2 text-white hover:text-black">
+                    <Link href={'/register'}> Register </Link>
+                  </button>
+              </li>
+              <li className='logo_text bg-black text-gray-100 hover:bg-white'>
+                <button className="outline rounded px-2 text-white hover:text-black">
+                  <Link href={'/login'}> Login </Link>
+                </button>
+              </li>
+            </>
           ) }
         </ul>
       </div>
@@ -77,34 +69,26 @@ const Nav = () => {
           ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white text-center ease-in duration-300' 
           : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white text-center ease-in duration-300'} >
         <ul className='sm:flex font-satoshi font-semibold'>
-        { isLoggedIn ? (
-            <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
-            </li>
-          ) : (
-            <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
-              <Link href='/'> Home </Link>
-            </li>
-          ) }
-          { isLoggedIn ? (
-            <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
-            </li>
-          ) : (
-            <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}> 
-              <button className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" >
-                <Link href={'/register'}> Register </Link>
-              </button>
-            </li>
-          ) }
           { isLoggedIn ? (
             <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
               <button onClick={logout} className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" > LogOut </button>
             </li>
           ) : (
-            <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}> 
-              <button className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" >
-                <Link href={'/login'}> Login </Link>
-              </button>
-            </li>
+            <>
+              <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
+                <Link href='/'> Home </Link>
+              </li>
+              <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}>
+                <button className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black">
+                  <Link href={'/register'}> Register </Link>
+                </button>
+              </li>
+              <li className='p-4 text-4xl hover:text-gray-600' onClick={handleNav}> 
+                <button className="outline rounded px-2 py-1 bg-black hover:bg-white text-white hover:text-black" >
+                  <Link href={'/login'}> Login </Link>
+                </button>
+              </li>
+            </>
           ) }
         </ul>
       </div>
