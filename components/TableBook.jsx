@@ -68,7 +68,7 @@ const TableBook = () => {
       <div className="" >
         <DataGrid 
           rows={data}
-          sx={{ width: { xs:320, sm:600, md:700, lg:920, xl:920,} }}
+          sx={{ width: { xs:320, sm:600, md:700, lg:930, xl:950,} }}
           columns={userColumns.concat(actionColumn)}
           initialState={{
             pagination: {

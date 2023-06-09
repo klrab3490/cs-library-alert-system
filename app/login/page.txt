@@ -1,0 +1,107 @@
+'use client';
+
+import React, { useState } from 'react';
+import { browserSessionPersistence, setPersistence, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { auth, db, provider } from '@lib/firebase.config';
+import { useRouter } from 'next/navigation';
+import { FcGoogle } from "react-icons/fc";
+import { doc, getDoc } from 'firebase/firestore';
+
+const page = () => {
+    const router = useRouter();
+    const [error, setError] = useState(false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [userType,setusertype] = useState("");
+    export const userType = userType;
+    const handleLogin = async(e) => {
+        e.preventDefault();
+        try {
+            setPersistence(auth, browserSessionPersistence)
+            .then(async() => {
+                return await signInWithEmailAndPassword(auth,email,password)
+                .then(async (userCredential) => {
+                        const user = userCredential.user;
+                        const docRef = doc(db,"Users",user.uid);
+                        const docSnap = await getDoc(docRef);
+                        if (docSnap.exists()) {
+                            const userData = docSnap.data();
+                            const userType = userData.usertype;
+                            if (userType=="Admin") {
+                                setusertype("Admin");
+                                router.push('/admin');
+                            }
+                            else if (userType=="User") {
+                                setusertype("User")
+                                router.push('/users');
+                            }
+                        }
+                })
+                .catch(async(error) => {
+                    setError(true);
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+                        
+        } catch (error) {
+            console.log("try error");
+        }
+        
+    }
+    const loginwithGoogle = async() => {
+        setPersistence(auth,browserSessionPersistence)
+        .then(async () => {
+            return await signInWithPopup(auth,provider)
+            .then(async (userCredential) => {
+                const user = userCredential.user;
+                const docRef = doc(db,"Users",user.uid);
+                const docSnap = await getDoc(docRef);
+                if (docSnap.exists()) {
+                    const userData = docSnap.data();
+                    const userType = userData.usertype;
+                    if (userType=="Admin") {
+                        router.push('/admin');
+                    }
+                    else if (userType=="User") {
+                        router.push('/users');
+                    }
+                }
+            })
+            .catch(async(error) => {
+                setError(true);
+            });
+        })
+        .catch((error) => {
+            console.log(error)
+        });
+    }
+
+    return (
+        <div className='login'>
+            <div className="signwith">
+                <h3> Sigin With </h3>
+                <FcGoogle onClick={loginwithGoogle} size={50} className='icon' />
+                <h3> Or With Email & Password </h3>
+            </div>
+            <form onSubmit={handleLogin}>
+                <div>
+                    <h3 className='mr-1'>Email : </h3>
+                    <input type="email" placeholder='Email' onChange={e=>setEmail(e.target.value)}/>
+                </div>
+                <div>
+                    <h3 className='mr-1'>Password : </h3>
+                    <input type="password" placeholder='Password' onChange={e=>setPassword(e.target.value)}/>
+                </div>
+                <div className='gap-2'>
+                    <button type='submit' className=' bg-blue-600 text-white'> Login </button>
+                </div>
+                {error && <span> Wrong Email Or Password </span>}
+            </form>
+        </div>
+    )
+}
+
+
+export default page;

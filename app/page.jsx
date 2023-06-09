@@ -1,8 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { getUserType } from './login/page';
+import AdminNav from '@components/AdminNav';
+import UserNav from '@components/UserNav';
 
 const Home = () => {
     return (
       <section className="w-full flex-center flex-col">
+        {/* {getUserType === "Admin" ? (
+          <AdminNav />
+        ) : getUserType === "Users" ? (
+          <UserNav />
+        ) : (
+          <></>
+        )} */}
         <h1 className="head_text text-center ">
           CS Department Library
           <br />

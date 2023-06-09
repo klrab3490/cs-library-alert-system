@@ -1,12 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { browserSessionPersistence, setPersistence, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, db, provider } from '@lib/firebase.config';
 import { useRouter } from 'next/navigation';
 import { FcGoogle } from "react-icons/fc";
 import { doc, getDoc } from 'firebase/firestore';
-import { signOut } from 'next-auth/react';
 
 const page = () => {
     const router = useRouter();
@@ -17,25 +16,31 @@ const page = () => {
     const handleLogin = async(e) => {
         e.preventDefault();
         try {
-            await signInWithEmailAndPassword(auth,email,password)
-            .then(async (userCredential) => {
-                    const user = userCredential.user;
-                    const docRef = doc(db,"Users",user.uid);
-                    const docSnap = await getDoc(docRef);
-                    if (docSnap.exists()) {
-                        const userData = docSnap.data();
-                        const userType = userData.usertype;
-                        if (userType=="Admin") {
-                            router.push('/admin');
+            setPersistence(auth, browserSessionPersistence)
+            .then(async() => {
+                return await signInWithEmailAndPassword(auth,email,password)
+                .then(async (userCredential) => {
+                        const user = userCredential.user;
+                        const docRef = doc(db,"Users",user.uid);
+                        const docSnap = await getDoc(docRef);
+                        if (docSnap.exists()) {
+                            const userData = docSnap.data();
+                            const userType = userData.usertype;
+                            if (userType=="Admin") {
+                                router.push('/admin');
+                            }
+                            else if (userType=="User") {
+                                router.push('/users');
+                            }
                         }
-                        else if (userType=="User") {
-                            router.push('/users');
-                        }
-                    }
+                })
+                .catch(async(error) => {
+                    setError(true);
+                });
             })
-            .catch(async(error) => {
-                setError(true);
-            });
+            .catch((error) => {
+                console.log(error);
+            })
                         
         } catch (error) {
             console.log("try error");
@@ -43,24 +48,31 @@ const page = () => {
         
     }
     const loginwithGoogle = async() => {
-        await signInWithPopup(auth,provider)
-        .then(async (userCredential) => {
-            const user = userCredential.user;
-            const docRef = doc(db,"Users",user.uid);
-            const docSnap = await getDoc(docRef);
-            if (docSnap.exists()) {
-                const userData = docSnap.data();
-                const userType = userData.usertype;
-                if (userType=="Admin") {
-                    router.push('/admin');
+        setPersistence(auth,browserSessionPersistence)
+        .then(async () => {
+            return await signInWithPopup(auth,provider)
+            .then(async (userCredential) => {
+                const user = userCredential.user;
+                const docRef = doc(db,"Users",user.uid);
+                const docSnap = await getDoc(docRef);
+                if (docSnap.exists()) {
+                    const userData = docSnap.data();
+                    const userType = userData.usertype;
+                    setUserType(userType);
+                    if (userType=="Admin") {
+                        router.push('/admin');
+                    }
+                    else if (userType=="User") {
+                        router.push('/users');
+                    }
                 }
-                else if (userType=="User") {
-                    router.push('/users');
-                }
-            }
+            })
+            .catch(async(error) => {
+                setError(true);
+            });
         })
-        .catch(async(error) => {
-            setError(true);
+        .catch((error) => {
+            console.log(error)
         });
     }
 
@@ -89,4 +101,4 @@ const page = () => {
     )
 }
 
-export default page
+export default page;
