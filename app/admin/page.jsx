@@ -14,7 +14,7 @@ const page = () => {
     <div className="">
       {/* Body */}
       <div className="w-full">
-        <div className="gap-4 sm:flex">
+        <div className="gap-4 p-4 sm:flex">
           <Widget type="user" />
           <Widget type="books" />
         </div>

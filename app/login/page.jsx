@@ -5,7 +5,7 @@ import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, db, provider } from '@lib/firebase.config';
 import { useRouter } from 'next/navigation';
 import { FcGoogle } from "react-icons/fc";
-import { collection, doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
 import { signOut } from 'next-auth/react';
 
 const page = () => {
@@ -30,18 +30,15 @@ const page = () => {
                         }
                         else if (userType=="User") {
                             router.push('/users');
-                        } else {
-                            await signOut(auth);
-                            router.push('/register');
                         }
                     }
             })
-            .catch((error) => {
+            .catch(async(error) => {
                 setError(true);
             });
                         
         } catch (error) {
-            console.log("try error")
+            console.log("try error");
         }
         
     }
@@ -59,13 +56,12 @@ const page = () => {
                 }
                 else if (userType=="User") {
                     router.push('/users');
-                } else {
-                    await signOut(auth);
-                    router.push('/register');
                 }
             }
         })
-        router.push('/');
+        .catch(async(error) => {
+            setError(true);
+        });
     }
 
     return (
