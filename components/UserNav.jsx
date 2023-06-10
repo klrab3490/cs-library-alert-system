@@ -36,7 +36,7 @@ const UserNav = () => {
                         </Link>
                     </li>
                     <li className="logo_text hover:text-gray-600">
-                        <Link href={'/users/notification'} className="flex">
+                        <Link href={'/users/wishlist'} className="flex">
                             <FaHeart size={23} className="mr-1 inline-block" />
                             Wishlist
                         </Link>
@@ -73,7 +73,7 @@ const UserNav = () => {
                         <div className="flex-col p-1">
                             <li className="flex">
                                 <center>
-                                    <Link href={'/users/notification'} className="p-1 inline-block self-center text">
+                                    <Link href={'/users/wishlist'} className="p-1 inline-block self-center text">
                                         <FaHeart size={25} className="mr-1 inline-block" />
                                         Wishlist
                                     </Link> 

@@ -30,8 +30,9 @@ const TableBook = () => {
   const userColumns = [
     { field: "book", headerName:"Book Name", width: 350},
     { field: "author", headerName:"Author", width: 100},
-    { field: "total", headerName:"Available Book", width: 110},
-    { field: "total", headerName:"Total Book Number", width: 150},
+    { field: "available", headerName:"Available Book", width: 110},
+    { field: "total", headerName:"Total Books", width: 110},
+    { field: "price", headerName:"Price", width: 90},
   ];
 
   const handleDelete = async (id) => {
@@ -68,7 +69,7 @@ const TableBook = () => {
       <div className="" >
         <DataGrid 
           rows={data}
-          sx={{ width: { xs:320, sm:600, md:700, lg:930, xl:950,} }}
+          sx={{ width: { xs:320, sm:600, md:870, lg:970, xl:970,} }}
           columns={userColumns.concat(actionColumn)}
           initialState={{
             pagination: {

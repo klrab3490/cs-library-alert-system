@@ -110,11 +110,11 @@ const LoginPage = () => {
                 </div>
                 <form onSubmit={handleLogin}>
                     <div>
-                        <h3 className='mr-1'>Email:</h3>
+                        <h3 className='mr-1'>Email : </h3>
                         <input type="email" placeholder='Email' onChange={e => setEmail(e.target.value)} />
                     </div>
                     <div>
-                        <h3 className='mr-1'>Password:</h3>
+                        <h3 className='mr-1'>Password : </h3>
                         <input type="password" placeholder='Password' onChange={e => setPassword(e.target.value)} />
                     </div>
                     <div className='gap-2'>

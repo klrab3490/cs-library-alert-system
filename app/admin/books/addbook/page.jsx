@@ -13,15 +13,21 @@ const page = () => {
   const userInputs = [
     {id:"book", label:"Book Name : ", type:"text", placeholder:"Enter Book Name"}, 
     {id:"author", label:"Author's Name : ", type:"text", placeholder:"Enter Author's Name"}, 
-    {id:"available", label:"Available Book Number : ", type:"text", placeholder:"Enter Available Book Number"}, 
-    {id:"total", label:"Total Number Of Books : ", type:"text", placeholder:"Enter Total Number Of This Books"}, 
+    {id:"available", label:"Available Book Number : ", type:"number", placeholder:"Enter Available Book Number"}, 
+    {id:"total", label:"Total Number Of Books : ", type:"number", placeholder:"Enter Total Number Of This Books"}, 
+    {id:"price", label:"Price : ", type:"number", placeholder:"Enter Price Books"}, 
   ];
 
   const handleInputs = (e) => {
     e.preventDefault();
     const id = e.target.id;
-    const value = e.target.value;
-    setData({...data, [id]:value})
+    if (e.target.type === "number") {
+      const value = parseInt(e.target.value);
+      setData({...data, [id]:value})
+    } else {
+      const value = e.target.value;
+      setData({...data, [id]:value})
+    }
   };
 
   const handleAdd = async(e) => {

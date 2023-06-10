@@ -32,15 +32,6 @@ const SearchTableBook = () => {
     { field: "author", headerName:"Author", width: 350},
   ];
 
-  // const handleDelete = async (id) => {
-  //   try {
-  //     await deleteDoc(doc(db,"Books",id));
-  //     setData(data.filter((item) => item.id !== id));
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
   const actionColumn = [
     {
       field: "action",
