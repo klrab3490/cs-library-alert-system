@@ -6,7 +6,7 @@ import { auth, db, provider } from '@lib/firebase.config';
 import { useRouter } from 'next/navigation';
 import { FcGoogle } from "react-icons/fc";
 import { doc, getDoc } from 'firebase/firestore';
-import Loader from '@components/loading';
+import Loader from '@components/loading';   
 
 const LoginPage = () => {
     const router = useRouter();
