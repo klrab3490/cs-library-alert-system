@@ -6,7 +6,12 @@ import { useState, useEffect } from 'react';
 const Search = () => {
     const [data, setData] = useState([]);
     const [user, setUser] = useState(null);
-    const [userID,setuserID] = useState('');
+    const [userID, setUserID] = useState('');
+    const [value, setValue] = useState('');
+
+    const handleSearch = (e) => {
+        setValue(e.target.value);
+    };
     
     useEffect(() => {
         const unsub = onSnapshot(collection(db, "Books"), (snapShot) => {
@@ -22,18 +27,22 @@ const Search = () => {
         const userdata = onAuthStateChanged(auth, async (user) => {
             if (user) {
                 setUser(user);
-                setuserID(user.uid);
+                setUserID(user.uid);
             } else {
                 setUser(null);
-                setuserID(null);
+                setUserID(null);
             }
         });
 
         return () => {
             unsub();
             userdata();
-        }
+        };
     }, []);
+
+    const filteredData = data.filter((item) => {
+        return item.book.toLowerCase().includes(value.toLowerCase());
+    });
 
     const handleAddToCart = async (item) => {
         const docRef = doc(db, "Books", item);
@@ -42,6 +51,7 @@ const Search = () => {
             alert("Book is not available");
             return;
         }
+
         // Add To Cart
         const docRef1 = doc(db, "Cart", userID);
         const docSnap1 = await getDoc(docRef1);
@@ -55,7 +65,7 @@ const Search = () => {
                 });
                 await updateDoc(docRef, {
                     borrowedby: arrayUnion(userID),
-                    available: parseInt(docSnap.data().available - 1)
+                    available: parseInt(docSnap.data().available - 1),
                 });
             }
         } else {
@@ -64,10 +74,9 @@ const Search = () => {
             });
             await updateDoc(docRef, {
                 borrowedby: arrayUnion(userID),
-                available: parseInt(docSnap.data().available - 1)
+                available: parseInt(docSnap.data().available - 1),
             });
         }
-        // Update Book Availability and Borrowed By
     };
 
     const handleAddToWishlist = async (item) => {
@@ -80,26 +89,30 @@ const Search = () => {
             } else {
                 await updateDoc(docRef, {
                     books: arrayUnion(item),
-                    date: arrayUnion(new Date())
+                    date: arrayUnion(new Date()),
                 });
             }
         } else {
             await setDoc(docRef, {
                 books: arrayUnion(item),
-                date: arrayUnion(new Date())
+                date: arrayUnion(new Date()),
             });
         }
     };
 
     return (
-        <div className='flex'>
-            <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
-                {data.map((item) => (
-                    <div key={item.id} className='p-4 bg-white shadow-md rounded'>
-                        <h3 className='text-xl font-bold'>{item.book}</h3>
-                        <p className='text-gray-600'>{item.author}</p>
-                        <button className='px-3 py-2 mt-4 bg-blue-500 text-white rounded hover:bg-blue-600' onClick={() => handleAddToCart(item.id)}> Add to Cart </button>
-                        <button className='ml-2 px-3 py-2 mt-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400' onClick={() => handleAddToWishlist(item.id)}> Add to Wishlist </button>
+        <div className="flex-col">
+            <div className="mr-4 w-full flex-center">
+                <input type="text" placeholder="Search" onChange={handleSearch} className=" border border-gray-300 rounded py-2 px-4" width={500} />
+            </div>
+            <hr className="my-4" />
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {filteredData.map((item) => (
+                    <div key={item.id} className="p-4 bg-white shadow-md rounded">
+                        <h3 className="text-xl font-bold">{item.book}</h3>
+                        <p className="text-gray-600">{item.author}</p>
+                        <button className="px-3 py-2 mt-4 bg-blue-500 text-white rounded hover:bg-blue-600" onClick={() => handleAddToCart(item.id)}>Add to Cart</button>
+                        <button className="ml-2 px-3 py-2 mt-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400" onClick={() => handleAddToWishlist(item.id)}>Add to Wishlist</button>
                     </div>
                 ))}
             </div>

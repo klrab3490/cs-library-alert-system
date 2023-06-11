@@ -1,0 +1,1553 @@
+[
+ {
+  "book": "8051 Microcontroller and Embedded Systems Using Assembly and C.",
+  "author": "Mazidi, Muhammad Ali",
+  "total": 2,
+  "available": 2,
+  "price": 635
+ },
+ {
+  "book": "8051 Microcontroller: Architecture, Programing and Applications.",
+  "author": "Ayala, Kenneth J",
+  "total": 2,
+  "available": 2,
+  "price": 295
+ },
+ {
+  "book": "8051 Microcontrollers: An Applications Based Introduction.",
+  "author": "Calcutt, David",
+  "total": 1,
+  "available": 1,
+  "price": 295
+ },
+ {
+  "book": "8088 and 8086 Microprocessors: Programming, Interfacing, Software, Hardware and Application 4th Ed.",
+  "author": "Triebel, Walter A",
+  "total": 2,
+  "available": 2,
+  "price": 350
+ },
+ {
+  "book": "Access 2000 for Dummies.",
+  "author": "Kaufeld, John",
+  "total": 1,
+  "available": 1,
+  "price": 199
+ },
+ {
+  "book": "Advanced Compiler Design Implementation.",
+  "author": "Muchnick, Steven S",
+  "total": 2,
+  "available": 2,
+  "price": 550
+ },
+ {
+  "book": "Advanced Computer Architecture.",
+  "author": "Parthasarathy, K A",
+  "total": 1,
+  "available": 1,
+  "price": 238
+ },
+ {
+  "book": "Advanced Concepts in Operating Systems: Distributed Database and Multiprocessor Operating Systems",
+  "author": "Singhal, Mukesh",
+  "total": 2,
+  "available": 2,
+  "price": 495
+ },
+ {
+  "book": "Advanced Information Technology .",
+  "author": "Jaiswal, S",
+  "total": 1,
+  "available": 1,
+  "price": 320
+ },
+ {
+  "book": "Advanced Microprocessors and Peripherals.",
+  "author": "Bhurchandi, K M",
+  "total": 2,
+  "available": 2,
+  "price": 585
+ },
+ {
+  "book": "Applied Cryptography",
+  "author": "Bruice Schneier",
+  "total": 2,
+  "available": 2,
+  "price": 413
+ },
+ {
+  "book": "Algorithms + Data Structures=programs.",
+  "author": "Wirth, Niklaus",
+  "total": 2,
+  "available": 2,
+  "price": 125
+ },
+ {
+  "book": "Book on C: Programming in C.",
+  "author": "Kelley, A L",
+  "total": 2,
+  "available": 2,
+  "price": 275
+ },
+ {
+  "book": "C 4 U.",
+  "author": "Thomas, P O",
+  "total": 2,
+  "available": 2,
+  "price": 150
+ },
+ {
+  "book": "C Through Objects",
+  "author": "Connely, John",
+  "total": 1,
+  "available": 1,
+  "price": 249
+ },
+ {
+  "book": "C#: An Object Oriented Approach.",
+  "author": "Xavier, C",
+  "total": 1,
+  "available": 1,
+  "price": 320
+ },
+ {
+  "book": "C++ Programming Bible.",
+  "author": "Stevens, Al",
+  "total": 1,
+  "available": 1,
+  "price": 299
+ },
+ {
+  "book": "Compilers, Principles, Techniques and Tools.",
+  "author": "Aho, Alfred V",
+  "total": 2,
+  "available": 2,
+  "price": 425
+ },
+ {
+  "book": "The Complete Reference C++",
+  "author": "Schildt, Herbert",
+  "total": 2,
+  "available": 2,
+  "price": 485
+ },
+ {
+  "book": "Complete Reference Java 2 5th Ed.",
+  "author": "Schildt, Herbert",
+  "total": 2,
+  "available": 2,
+  "price": 585
+ },
+ {
+  "book": "Complete Reference VC++6.",
+  "author": "Pappas, Chris H",
+  "total": 2,
+  "available": 2,
+  "price": 395
+ },
+ {
+  "book": "Comprehensive Approach to Microcontrollers: 8051 and MSP 430 Microcontroller Family Architecture …",
+  "author": "Godse, A P",
+  "total": 2,
+  "available": 2,
+  "price": 395
+ },
+ {
+  "book": "Computer Algorithms: Introduction to Design and Analysis 3rd Ed.",
+  "author": "Baase, Sara",
+  "total": 1,
+  "available": 1,
+  "price": 325
+ },
+ {
+  "book": "Computer Architecture and Parallel Processing.",
+  "author": "Hwang, Kai",
+  "total": 2,
+  "available": 2,
+  "price": 163
+ },
+ {
+  "book": "Computer Architecture: A Quantitative Approach.",
+  "author": "Hennessy, John L",
+  "total": 1,
+  "available": 1,
+  "price": 395
+ },
+ {
+  "book": "Computer Graphics C Version.",
+  "author": "Hearn, Donald D",
+  "total": 2,
+  "available": 2,
+  "price": 825
+ },
+ {
+  "book": "Computer Graphics: Principles and Practice.",
+  "author": "Foley, James D",
+  "total": 2,
+  "available": 2,
+  "price": 599
+ },
+ {
+  "book": "Computer Networking: A Top Down Approach Featuring the Internet 3rd Ed.",
+  "author": "Kurose, James F",
+  "total": 2,
+  "available": 2,
+  "price": 575
+ },
+ {
+  "book": "Computer Networks.",
+  "author": "Tanenbaum, Andrew S",
+  "total": 2,
+  "available": 2,
+  "price": 225
+ },
+ {
+  "book": "Computer Networks: A Systems Approach .",
+  "author": "Peterson, Larry L",
+  "total": 2,
+  "available": 2,
+  "price": 487.5
+ },
+ {
+  "book": "Computer Organisation and Design.",
+  "author": "Chaudhuri, Pal P",
+  "total": 2,
+  "available": 2,
+  "price": 350
+ },
+ {
+  "book": "Computer Organization .",
+  "author": "Hamacher, V Carl",
+  "total": 2,
+  "available": 2,
+  "price": 362
+ },
+ {
+  "book": "Computer Organization and Architecture: Designing Performance.",
+  "author": "Stallings, William",
+  "total": 1,
+  "available": 1,
+  "price": 250
+ },
+ {
+  "book": "Computer Programming in C",
+  "author": "Rajaraman, V",
+  "total": 2,
+  "available": 2,
+  "price": 150
+ },
+ {
+  "book": "Computer System Architecturte.",
+  "author": "Mano, Morris M",
+  "total": 2,
+  "available": 2,
+  "price": 195
+ },
+ {
+  "book": "Computer Systems Organization and Architecture.",
+  "author": "Carpinelli, John D",
+  "total": 1,
+  "available": 1,
+  "price": 295
+ },
+ {
+  "book": "Concepts of Programming Languages 4th Ed.",
+  "author": "Sebesta, Robert W",
+  "total": 1,
+  "available": 1,
+  "price": 325
+ },
+ {
+  "book": "Creating a Winning e Business.",
+  "author": "Napier, A Albert",
+  "total": 2,
+  "available": 2,
+  "price": 395
+ },
+ {
+  "book": "Cryptography and Network Security: Principles and Practices.",
+  "author": "Stallings, William",
+  "total": 1,
+  "available": 1,
+  "price": 225
+ },
+ {
+  "book": "Data and Computer Communications 8the Ed.",
+  "author": "Stallings, William",
+  "total": 2,
+  "available": 2,
+  "price": 699
+ },
+ {
+  "book": "Data Communications and Networking 2nd Ed.",
+  "author": "Forouzan, Behrouz A",
+  "total": 2,
+  "available": 2,
+  "price": 387
+ },
+ {
+  "book": "Data Communications Computer Networks and Open Systems.",
+  "author": "Halsall, Fred",
+  "total": 2,
+  "available": 2,
+  "price": 375
+ },
+ {
+  "book": "Data Networks 2nd Ed.",
+  "author": "Bertsekas, Dimitri",
+  "total": 2,
+  "available": 2,
+  "price": 340
+ },
+ {
+  "book": "Data Structures and Algorithms.",
+  "author": "Aho, Alfred V",
+  "total": 2,
+  "available": 2,
+  "price": 535
+ },
+ {
+  "book": "Database System Concepts 6th Ed.",
+  "author": "Silberschatz, Abraham",
+  "total": 1,
+  "available": 1,
+  "price": 852.8
+ },
+ {
+  "book": "Design of the Unix Operating System.",
+  "author": "Bach, Maurice J",
+  "total": 1,
+  "available": 1,
+  "price": 195
+ },
+ {
+  "book": "Digital Computer Electronics.",
+  "author": "Malvino, Aibert Paul",
+  "total": 2,
+  "available": 2,
+  "price": 265
+ },
+ {
+  "book": "Embedded System Design: A Unified Hardware\/ Software Introduction.",
+  "author": "Vahid, Frank",
+  "total": 2,
+  "available": 2,
+  "price": 389
+ },
+ {
+  "book": "Embedded Systems Design",
+  "author": "Bailey, Oliver",
+  "total": 1,
+  "available": 1,
+  "price": 299
+ },
+ {
+  "book": "Embedded Systems: Architecture, Programming and Design.",
+  "author": "Kamal, Raj",
+  "total": 2,
+  "available": 2,
+  "price": 275
+ },
+ {
+  "book": "Embedded\/real-Time Systems: Concepts, Design and Programming.",
+  "author": "Prasad, K V K K",
+  "total": 2,
+  "available": 2,
+  "price": 549
+ },
+ {
+  "book": "Exploring Word 2002.",
+  "author": "Bahl, Ragahav",
+  "total": 1,
+  "available": 1,
+  "price": 115
+ },
+ {
+  "book": "First Course in Computers.",
+  "author": "Saxena, Sanjay",
+  "total": 1,
+  "available": 1,
+  "price": 200
+ },
+ {
+  "book": "Fundamentals of Computers.",
+  "author": "Rajaraman, V",
+  "total": 1,
+  "available": 1,
+  "price": 125
+ },
+ {
+  "book": "Fundamentals of Database Systems .",
+  "author": "Elmasri, Ramez",
+  "total": 2,
+  "available": 2,
+  "price": 175
+ },
+ {
+  "book": "Fundamentals of Object, Oriented Design in UML",
+  "author": "Page-Jones, Meilir",
+  "total": 2,
+  "available": 2,
+  "price": 295
+ },
+ {
+  "book": "Fundamentals of Software Engineering.",
+  "author": "Mall, Rajib",
+  "total": 1,
+  "available": 1,
+  "price": 125
+ },
+ {
+  "book": "Fundamentals of Software Engineering.",
+  "author": "Ghezzi, Carlo",
+  "total": 2,
+  "available": 2,
+  "price": 195
+ },
+ {
+  "book": "How to Do Everything With the Internet.",
+  "author": "Jones, Dennis",
+  "total": 1,
+  "available": 1,
+  "price": 325
+ },
+ {
+  "book": "How to Pass Data Interpretation Tests.",
+  "author": "Bryon, Mike",
+  "total": 1,
+  "available": 1,
+  "price": 175
+ },
+ {
+  "book": "Information Theory and Coding.",
+  "author": "Chitode, J S",
+  "total": 1,
+  "available": 1,
+  "price": 250
+ },
+ {
+  "book": "Integrated Approach to Software Engineering 2nd Ed.",
+  "author": "Jalote, Pankaj",
+  "total": 1,
+  "available": 1,
+  "price": 275
+ },
+ {
+  "book": "Intel Microprocessors 8086\/8088, 80186\/80188, 80286, 80386, 80486, Pentium and Pentium Processor …",
+  "author": "Brey, Barry B",
+  "total": 1,
+  "available": 1,
+  "price": 350
+ },
+ {
+  "book": "Internet Cryptography",
+  "author": "Smith, Richard E",
+  "total": 1,
+  "available": 1,
+  "price": 250
+ },
+ {
+  "book": "Internet for Dummies 7th Ed.",
+  "author": "Levine, John R",
+  "total": 1,
+  "available": 1,
+  "price": 199
+ },
+ {
+  "book": "Internet With Webpage\/website Design Bible.",
+  "author": "Underdahl, Brian",
+  "total": 1,
+  "available": 1,
+  "price": 399
+ },
+ {
+  "book": "Internetworking With TCP\/IP Vol, 1: Principles Protocols and Architectures Ed.4",
+  "author": "Comer, Douglas E",
+  "total": 1,
+  "available": 1,
+  "price": 350
+ },
+ {
+  "book": "Introduction to Algorithms .",
+  "author": "Cormen, Thomas H",
+  "total": 2,
+  "available": 2,
+  "price": 425
+ },
+ {
+  "book": "Introduction to Automata Theory, Languages and Computation.",
+  "author": "Hopcroft, John E",
+  "total": 2,
+  "available": 2,
+  "price": 475
+ },
+ {
+  "book": "Introduction to Computers.",
+  "author": "Norton, Peter",
+  "total": 2,
+  "available": 2,
+  "price": 350
+ },
+ {
+  "book": "Introduction to Formal Languages and Automata.",
+  "author": "Linz, Peter",
+  "total": 2,
+  "available": 2,
+  "price": 275
+ },
+ {
+  "book": "Introduction to Languages and the Theory of Computation 3rd Ed.",
+  "author": "Martin, John C",
+  "total": 2,
+  "available": 2,
+  "price": 225
+ },
+ {
+  "book": "Java Programming: A Practical Approach.",
+  "author": "Xavier, C",
+  "total": 2,
+  "available": 2,
+  "price": 510
+ },
+ {
+  "book": "Linux: The Complete Reference 6th Ed.",
+  "author": "Petersen, Richard",
+  "total": 2,
+  "available": 2,
+  "price": 625
+ },
+ {
+  "book": "LISP 3rd Ed.",
+  "author": "Winston, P H",
+  "total": 2,
+  "available": 2,
+  "price": 635
+ },
+ {
+  "book": "Managing Software Projects",
+  "author": "Tsui, Frank",
+  "total": 1,
+  "available": 1,
+  "price": 325
+ },
+ {
+  "book": "Micro Controllers and Aplications.",
+  "author": "Kalpthi, Ramani",
+  "total": 1,
+  "available": 1,
+  "price": 415
+ },
+ {
+  "book": "Micro Processors and Interfacing Programming and Hardware.",
+  "author": "Hall, Douglas V",
+  "total": 2,
+  "available": 2,
+  "price": 300
+ },
+ {
+  "book": "Microcomputer Systems:The 8086\/8088 Family Architecture, Programming and Design.",
+  "author": "Liu, Yu Cheng",
+  "total": 2,
+  "available": 2,
+  "price": 195
+ },
+ {
+  "book": "Microcontroller Idea Book Circuits, Programs and Applications.",
+  "author": "Axelson, Jan",
+  "total": 1,
+  "available": 1,
+  "price": 150
+ },
+ {
+  "book": "Microcontrollers: Architecture, Programming, Interfacing and System Design.",
+  "author": "Kamal, Raj",
+  "total": 2,
+  "available": 2,
+  "price": 499
+ },
+ {
+  "book": "Microcontrollers: Theory and Applications.",
+  "author": "Deshmukh, Ajay V",
+  "total": 1,
+  "available": 1,
+  "price": 235
+ },
+ {
+  "book": "Microprocessor and Its Applications.",
+  "author": "Godse, A P",
+  "total": 2,
+  "available": 2,
+  "price": 375
+ },
+ {
+  "book": "Microprocessor, Architecture, Programming and Applications With the 8085.",
+  "author": "Gaonkar, Ramesh",
+  "total": 1,
+  "available": 1,
+  "price": 360
+ },
+ {
+  "book": "Microprocessors, Interfacing and Applications.",
+  "author": "Singh, Renu",
+  "total": 1,
+  "available": 1,
+  "price": 200
+ },
+ {
+  "book": "Modern Information Retrieval.",
+  "author": "Yates, Baeza-Ricardo",
+  "total": 2,
+  "available": 2,
+  "price": 410
+ },
+ {
+  "book": "Modern Operating Systems.",
+  "author": "Tanenbaum, Andrew S",
+  "total": 2,
+  "available": 2,
+  "price": 450
+ },
+ {
+  "book": "Multimedia: Computing, Communications and Applications.",
+  "author": "Steinmetz, Ralf",
+  "total": 2,
+  "available": 2,
+  "price": 395
+ },
+ {
+  "book": "Object Oriented Analysis and Design With Applications 2nd Ed.",
+  "author": "Booch, Grady",
+  "total": 1,
+  "available": 1,
+  "price": 450
+ },
+ {
+  "book": "Object Oriented Programming in C++ 3rd Ed.",
+  "author": "Lafore, Robert",
+  "total": 2,
+  "available": 2,
+  "price": 450
+ },
+ {
+  "book": "Object Oriented Programming With C++.",
+  "author": "Balagurusamy, E",
+  "total": 2,
+  "available": 2,
+  "price": 165
+ },
+ {
+  "book": "Office XP Bible",
+  "author": "Willett, Edward C",
+  "total": 2,
+  "available": 2,
+  "price": 399
+ },
+ {
+  "book": "Operating System Concepts.",
+  "author": "Silberschatz, Abraham",
+  "total": 2,
+  "available": 2,
+  "price": 492
+ },
+ {
+  "book": "Operating System Principles 7th Ed.",
+  "author": "Silberschatz, Abraham",
+  "total": 1,
+  "available": 1,
+  "price": 413
+ },
+ {
+  "book": "Operating Systems .",
+  "author": "Nutt, Gary",
+  "total": 2,
+  "available": 2,
+  "price": 699
+ },
+ {
+  "book": "Oracle 8i",
+  "author": "Couchman,Jason S",
+  "total": 1,
+  "available": 1,
+  "price": 475
+ },
+ {
+  "book": "PC Upgrade and Repair Black Book.",
+  "author": "Gilster, Ron",
+  "total": 2,
+  "available": 2,
+  "price": 399
+ },
+ {
+  "book": "Principles of Database Systems.",
+  "author": "Ullman, Jeffrey O",
+  "total": 1,
+  "available": 1,
+  "price": 320
+ },
+ {
+  "book": "Problem Solving Using C",
+  "author": "Rajaram, R",
+  "total": 1,
+  "available": 1,
+  "price": 80
+ },
+ {
+  "book": "Programming in Ansi C.",
+  "author": "Balagurusamy, E",
+  "total": 1,
+  "available": 1,
+  "price": 190
+ },
+ {
+  "book": "Programming Languages: Concepts and Constructs .",
+  "author": "Sethi, Ravi",
+  "total": 2,
+  "available": 2,
+  "price": 365
+ },
+ {
+  "book": "Programming Languages: Paradigm and Practice.",
+  "author": "Appleby, Doris",
+  "total": 2,
+  "available": 2,
+  "price": 195
+ },
+ {
+  "book": "Programming the World Wide Web",
+  "author": "Sebesta, Robert W",
+  "total": 2,
+  "available": 2,
+  "price": 560
+ },
+ {
+  "book": "Programming With C.",
+  "author": "Venugopal, K R",
+  "total": 2,
+  "available": 2,
+  "price": 180
+ },
+ {
+  "book": "Programming With C++",
+  "author": "Ravichandran, D",
+  "total": 1,
+  "available": 1,
+  "price": 199
+ },
+ {
+  "book": "Programming With C.",
+  "author": "Gottfried, Byron",
+  "total": 2,
+  "available": 2,
+  "price": 245
+ },
+ {
+  "book": "Programming With Java: A Primer 4th Ed.",
+  "author": "Balagurusamy, E",
+  "total": 2,
+  "available": 2,
+  "price": 680
+ },
+ {
+  "book": "Projects Using C: With Concepts and Algorithms",
+  "author": "Varalakshmi, P V N",
+  "total": 2,
+  "available": 2,
+  "price": 460
+ },
+ {
+  "book": "PROLOG: Programming for Artificial Intelligence.",
+  "author": "Bratko, Ivan",
+  "total": 1,
+  "available": 1,
+  "price": 799
+ },
+ {
+  "book": "Randomized Algorithms.",
+  "author": "Motwani, Rajeev",
+  "total": 2,
+  "available": 2,
+  "price": 395
+ },
+ {
+  "book": "Real Time Systems Design and Analysis",
+  "author": "Laplante, Phillip A",
+  "total": 2,
+  "available": 2,
+  "price": 275
+ },
+ {
+  "book": "Sams Teach Yourself C in 21 Days.",
+  "author": "Aitken, Peter",
+  "total": 1,
+  "available": 1,
+  "price": 225
+ },
+ {
+  "book": "Software Architecture: Perspectives on an Emerging Discipline.",
+  "author": "Shaw, Mary",
+  "total": 2,
+  "available": 2,
+  "price": 195
+ },
+ {
+  "book": "Software Engineering.",
+  "author": "Sommerville, Ian",
+  "total": 2,
+  "available": 2,
+  "price": 375
+ },
+ {
+  "book": "Software Project Management 2nd Ed.",
+  "author": "Hughes, Bob",
+  "total": 1,
+  "available": 1,
+  "price": 285
+ },
+ {
+  "book": "Software Project Management: A Concise Study.",
+  "author": "Kelkar, S A",
+  "total": 2,
+  "available": 2,
+  "price": 125
+ },
+ {
+  "book": "Systems Programming and Operating Systems 2nd Ed.",
+  "author": "Dhamdhere, D M",
+  "total": 1,
+  "available": 1,
+  "price": 240
+ },
+ {
+  "book": "TCP\/IP Protocol Suite.",
+  "author": "Forouzan, Behrouz A",
+  "total": 2,
+  "available": 2,
+  "price": 585
+ },
+ {
+  "book": "Test Your C Skills.",
+  "author": "Kanetkar, Yashavant P",
+  "total": 1,
+  "available": 1,
+  "price": 210
+ },
+ {
+  "book": "Testing Computer Software 2nd Ed.",
+  "author": "Kaner, Cem",
+  "total": 1,
+  "available": 1,
+  "price": 295
+ },
+ {
+  "book": "Theory & Problems of Programming With C++ 2nd Ed.",
+  "author": "Hubbard, John R",
+  "total": 2,
+  "available": 2,
+  "price": 175
+ },
+ {
+  "book": "Unified Software Development Process.",
+  "author": "Jacobson, Ivar",
+  "total": 2,
+  "available": 2,
+  "price": 125
+ },
+ {
+  "book": "Upgrading and Repairing PCS.",
+  "author": "Mueller, Scott",
+  "total": 1,
+  "available": 1,
+  "price": 650
+ },
+ {
+  "book": "Upgrading Your PC in Easy Steps",
+  "author": "Austin, Brian",
+  "total": 2,
+  "available": 2,
+  "price": 79
+ },
+ {
+  "book": "Visual Basic 6 Database Programming Bible.",
+  "author": "Freeze, Wayne",
+  "total": 1,
+  "available": 1,
+  "price": 399
+ },
+ {
+  "book": "Visual Basic 6: The Complete Reference.",
+  "author": "Jerke, Noel",
+  "total": 1,
+  "available": 1,
+  "price": 395
+ },
+ {
+  "book": "Visual Basic. NET Programming.",
+  "author": "Holzner, Steven",
+  "total": 1,
+  "available": 1,
+  "price": 450
+ },
+ {
+  "book": "Visual C++6 Programming Bible.",
+  "author": "Leinecker, Richard C",
+  "total": 1,
+  "available": 1,
+  "price": 499
+ },
+ {
+  "book": "Web Commerce Technology Handbook",
+  "author": "Minoli, Daniel",
+  "total": 2,
+  "available": 2,
+  "price": 295
+ },
+ {
+  "book": "XML: The Complete Reference.",
+  "author": "Williamson, Heather",
+  "total": 1,
+  "available": 1,
+  "price": 795
+ },
+ {
+  "book": "Big Data Analytics",
+  "author": "Ohlhorst, J Frank.",
+  "total": 1,
+  "available": 1,
+  "price": 695
+ },
+ {
+  "book": "Bioinformatics Methods and Applications",
+  "author": "Rastogi, S C.",
+  "total": 1,
+  "available": 1,
+  "price": 475
+ },
+ {
+  "book": "Classic Data Structures",
+  "author": "Samanta, Debasis",
+  "total": 1,
+  "available": 1,
+  "price": 495
+ },
+ {
+  "book": "Computer Graphics",
+  "author": "Donald Hearn",
+  "total": 1,
+  "available": 1,
+  "price": 875
+ },
+ {
+  "book": "Cryptography and Network Security.",
+  "author": "Forouzan, Behrouz A.",
+  "total": 1,
+  "available": 1,
+  "price": 695
+ },
+ {
+  "book": "Data Mining: Concepts and Techniques..",
+  "author": "Han, Jiawei.",
+  "total": 1,
+  "available": 1,
+  "price": 565
+ },
+ {
+  "book": "Design Analysis of Algorithms",
+  "author": "Sridhar",
+  "total": 1,
+  "available": 1,
+  "price": 625
+ },
+ {
+  "book": "Digital Image Processing",
+  "author": "Rafael.C Gonzalez",
+  "total": 1,
+  "available": 1,
+  "price": 875
+ },
+ {
+  "book": "Distributed Systems, Concepts and Design 3rd Ed.",
+  "author": "George Coulouris",
+  "total": 1,
+  "available": 1,
+  "price": 395
+ },
+ {
+  "book": "Engineering Design A Project Based Introduction",
+  "author": "Dym, Clive",
+  "total": 1,
+  "available": 1,
+  "price": 529
+ },
+ {
+  "book": "Exploring Engineering",
+  "author": "Kosky, Philip.",
+  "total": 1,
+  "available": 1,
+  "price": 649
+ },
+ {
+  "book": "Fundamental Concepts of Bioinformatics",
+  "author": "Dan E Krane",
+  "total": 1,
+  "available": 1,
+  "price": 575
+ },
+ {
+  "book": "Object Oriented Systems Development: Using the Unified Modeling Language",
+  "author": "Bahrami, Ali.",
+  "total": 1,
+  "available": 1,
+  "price": 625
+ },
+ {
+  "book": "Pattern Recognition and Image Analysis.",
+  "author": "Earl Gose",
+  "total": 1,
+  "available": 1,
+  "price": 619
+ },
+ {
+  "book": "Principles of Management",
+  "author": "P C Tripathi",
+  "total": 1,
+  "available": 1,
+  "price": 499
+ },
+ {
+  "book": "Principles of Soft Computing 2nd edition",
+  "author": "S N Sivanandam",
+  "total": 1,
+  "available": 1,
+  "price": 699
+ },
+ {
+  "book": "Programming With Java: A Primer",
+  "author": "Balagurusamy, E.",
+  "total": 1,
+  "available": 1,
+  "price": 450
+ },
+ {
+  "book": "Data Structures Using C",
+  "author": "Reema Thareja",
+  "total": 1,
+  "available": 1,
+  "price": 560
+ },
+ {
+  "book": "Programming Language Pragmatics",
+  "author": "Scott, Michael L.",
+  "total": 1,
+  "available": 1,
+  "price": 625
+ },
+ {
+  "book": "System Software",
+  "author": "Beck, Leland L.",
+  "total": 1,
+  "available": 1,
+  "price": 599
+ },
+ {
+  "book": "Computer Fundamentals and Programming in C",
+  "author": "Reema Thareja",
+  "total": 1,
+  "available": 1,
+  "price": 525
+ },
+ {
+  "book": "Advanced Computer Architecture: Parallelism Scalability Programmability",
+  "author": "Hwang, Kai",
+  "total": 1,
+  "available": 1,
+  "price": 840
+ },
+ {
+  "book": "Introduction to the Design and Analysis of Algorithms",
+  "author": "Levitin, Anany",
+  "total": 1,
+  "available": 1,
+  "price": 650
+ },
+ {
+  "book": "Elements of Discrete Mathematics: A Computer Oriented Approach",
+  "author": "Liu, C L",
+  "total": 1,
+  "available": 1,
+  "price": 550
+ },
+ {
+  "book": "Microprocessors and Microcontrollers",
+  "author": "Kani, A Nagoor",
+  "total": 1,
+  "available": 1,
+  "price": 545
+ },
+ {
+  "book": "Computer Networks",
+  "author": "Tanenbaum, Andrew S",
+  "total": 1,
+  "available": 1,
+  "price": 250
+ },
+ {
+  "book": "Artificial Intelligence",
+  "author": "Nilsson Nils J",
+  "total": 1,
+  "available": 1,
+  "price": 395
+ },
+ {
+  "book": "Artificial Intelligence",
+  "author": "Luger, George F",
+  "total": 1,
+  "available": 1,
+  "price": 799
+ },
+ {
+  "book": "Artificial Intelligence",
+  "author": "Russell, Stuart",
+  "total": 1,
+  "available": 1,
+  "price": 879
+ },
+ {
+  "book": "Big Data And Analytics",
+  "author": "Acharya, Seema",
+  "total": 1,
+  "available": 1,
+  "price": 589
+ },
+ {
+  "book": "Big Data",
+  "author": "Schmarzo, Bill",
+  "total": 1,
+  "available": 1,
+  "price": 599
+ },
+ {
+  "book": "Big Data",
+  "author": "Dt Editorial",
+  "total": 1,
+  "available": 1,
+  "price": 899
+ },
+ {
+  "book": "Compilers",
+  "author": "Aho, Alfred V",
+  "total": 1,
+  "available": 1,
+  "price": 425
+ },
+ {
+  "book": "Computer Algorithms",
+  "author": "Baase, Sara",
+  "total": 2,
+  "available": 2,
+  "price": 699
+ },
+ {
+  "book": "Cryptography And Network Security",
+  "author": "Stallings William",
+  "total": 1,
+  "available": 1,
+  "price": 225
+ },
+ {
+  "book": "Data Algorithms",
+  "author": "Parsian, Mahmoud",
+  "total": 1,
+  "available": 1,
+  "price": 1550
+ },
+ {
+  "book": "Data Communications And Networking",
+  "author": "Forouzan, Behrouz A",
+  "total": 2,
+  "available": 2,
+  "price": 425
+ },
+ {
+  "book": "Data Mining- Concepts, Models, Methods, And Algorithms",
+  "author": "Kantardzic, Mehmed",
+  "total": 1,
+  "available": 1,
+  "price": 629
+ },
+ {
+  "book": "Database System Concepts",
+  "author": "Silberschatz, Abraham",
+  "total": 1,
+  "available": 1,
+  "price": 860
+ },
+ {
+  "book": "Database Systems Concepts, Designs And Application 2nd Ed",
+  "author": "Singh, Shio Kumar",
+  "total": 1,
+  "available": 1,
+  "price": 450
+ },
+ {
+  "book": "Deep Learning",
+  "author": "Josh Patterson",
+  "total": 1,
+  "available": 1,
+  "price": 1475
+ },
+ {
+  "book": "Design And Analysis Of Algorithms",
+  "author": "Sridhar, S",
+  "total": 1,
+  "available": 1,
+  "price": 625
+ },
+ {
+  "book": "Digital Image Processing",
+  "author": "Gonzalez, Rafael C",
+  "total": 1,
+  "available": 1,
+  "price": 599
+ },
+ {
+  "book": "Distributed Systems",
+  "author": "Tanenbaum, Andrew S",
+  "total": 1,
+  "available": 1,
+  "price": 629
+ },
+ {
+  "book": "Effective Methods For Software Testing",
+  "author": "Perry, William E",
+  "total": 1,
+  "available": 1,
+  "price": 499
+ },
+ {
+  "book": "Fundamentals Of Data Structures In C",
+  "author": "Horowitz Sahni",
+  "total": 1,
+  "available": 1,
+  "price": 395
+ },
+ {
+  "book": "Fundamentals Of Database Systems",
+  "author": "Elmasri Ramez",
+  "total": 1,
+  "available": 1,
+  "price": 575
+ },
+ {
+  "book": "Fundamentals Of Python",
+  "author": "Lambert, Kenneth A",
+  "total": 3,
+  "available": 3,
+  "price": 399
+ },
+ {
+  "book": "Fundamentals Of Software Engineering",
+  "author": "Mall, Rajib",
+  "total": 1,
+  "available": 1,
+  "price": 325
+ },
+ {
+  "book": "Fuzzy Logic With Engineering Applications",
+  "author": "Ross, Timothy j",
+  "total": 1,
+  "available": 1,
+  "price": 779
+ },
+ {
+  "book": "Information Security And Cyber Laws",
+  "author": "Mishra Amit Kumar",
+  "total": 1,
+  "available": 1,
+  "price": 395
+ },
+ {
+  "book": "Information Security And Cyber Laws",
+  "author": "Sharma Pankaj",
+  "total": 1,
+  "available": 1,
+  "price": 265
+ },
+ {
+  "book": "Information Storage And Reterival",
+  "author": "Korfhage, Robert R",
+  "total": 1,
+  "available": 1,
+  "price": 559
+ },
+ {
+  "book": "Information Theory And Coding",
+  "author": "Goyal Varun",
+  "total": 1,
+  "available": 1,
+  "price": 265
+ },
+ {
+  "book": "Introduction To Algorithms",
+  "author": "Cormen Thomas H",
+  "total": 1,
+  "available": 1,
+  "price": 425
+ },
+ {
+  "book": "Introduction To Computation And Programming Using Python",
+  "author": "Guttag John V",
+  "total": 1,
+  "available": 1,
+  "price": 395
+ },
+ {
+  "book": "Introduction To Machine Learning",
+  "author": "Alpaydin Ethem",
+  "total": 1,
+  "available": 1,
+  "price": 625
+ },
+ {
+  "book": "Java: The Complete Reference",
+  "author": "Schildt , Herbert",
+  "total": 2,
+  "available": 2,
+  "price": 795
+ },
+ {
+  "book": "Mastering C",
+  "author": "Venugopal, K R",
+  "total": 1,
+  "available": 1,
+  "price": 650
+ },
+ {
+  "book": "Microprocessor And Its Applications",
+  "author": "Godse, A P",
+  "total": 1,
+  "available": 1,
+  "price": 375
+ },
+ {
+  "book": "Microsoft Office 2000 For Windows For Dummies",
+  "author": "Wang, Wallace",
+  "total": 1,
+  "available": 1,
+  "price": 199
+ },
+ {
+  "book": "Mobile Computing",
+  "author": "Talukder, Asoke K",
+  "total": 1,
+  "available": 1,
+  "price": 675
+ },
+ {
+  "book": "Object Oriented Programming With C++",
+  "author": "Balagurusamy E",
+  "total": 2,
+  "available": 2,
+  "price": 385
+ },
+ {
+  "book": "Office Xp For Dummies",
+  "author": "Wang, Wallace",
+  "total": 1,
+  "available": 1,
+  "price": 199
+ },
+ {
+  "book": "Pattern Classification",
+  "author": "Duda, Richard O",
+  "total": 1,
+  "available": 1,
+  "price": 789
+ },
+ {
+  "book": "Problem Solving And Programming Concepts",
+  "author": "Sprankle, Maureen",
+  "total": 1,
+  "available": 1,
+  "price": 699
+ },
+ {
+  "book": "Programing In Ansi C",
+  "author": "Balagurusamy, E",
+  "total": 1,
+  "available": 1,
+  "price": 310
+ },
+ {
+  "book": "Programming Bitcoin",
+  "author": "Song, Jimmy",
+  "total": 1,
+  "available": 1,
+  "price": 1150
+ },
+ {
+  "book": "Programming In C",
+  "author": "Kamthane, Ashok N",
+  "total": 1,
+  "available": 1,
+  "price": 419
+ },
+ {
+  "book": "Programming In C",
+  "author": "Gisha, G S",
+  "total": 1,
+  "available": 1,
+  "price": 250
+ },
+ {
+  "book": "Programming In Prolog",
+  "author": "Clocksin, W F",
+  "total": 2,
+  "available": 2,
+  "price": 165
+ },
+ {
+  "book": "Programming Language Concepts",
+  "author": "Ghezzi, Carlo",
+  "total": 1,
+  "available": 1,
+  "price": 559
+ },
+ {
+  "book": "Programming With C",
+  "author": "Gottfried S Byron",
+  "total": 1,
+  "available": 1,
+  "price": 615
+ },
+ {
+  "book": "Programming With C++",
+  "author": "Hubbard John R",
+  "total": 1,
+  "available": 1,
+  "price": 725
+ },
+ {
+  "book": "Python",
+  "author": "Gift, Noah",
+  "total": 1,
+  "available": 1,
+  "price": 850
+ },
+ {
+  "book": "Research Methodology",
+  "author": "Kothari, C R",
+  "total": 1,
+  "available": 1,
+  "price": 399
+ },
+ {
+  "book": "Software Architecture",
+  "author": "Taylor, Richard N",
+  "total": 1,
+  "available": 1,
+  "price": 639
+ },
+ {
+  "book": "Software Engineering",
+  "author": "Aggarwal, K K",
+  "total": 1,
+  "available": 1,
+  "price": 399
+ },
+ {
+  "book": "Software Engineering:",
+  "author": "Pressman, Roger S",
+  "total": 1,
+  "available": 1,
+  "price": 899
+ },
+ {
+  "book": "Software Testing",
+  "author": "Chauhan, Naresh",
+  "total": 1,
+  "available": 1,
+  "price": 610
+ },
+ {
+  "book": "System Software",
+  "author": "Beck, Leland L",
+  "total": 1,
+  "available": 1,
+  "price": 599
+ },
+ {
+  "book": "Theory Of Automata And Computation",
+  "author": "Pandey Adesh Kumar",
+  "total": 1,
+  "available": 1,
+  "price": 295
+ },
+ {
+  "book": "Cloud Computing",
+  "author": "Singh Shailendra Singh",
+  "total": 1,
+  "available": 1,
+  "price": 525
+ },
+ {
+  "book": "Cloud Computing",
+  "author": "Bhowmik Sandeep",
+  "total": 1,
+  "available": 1,
+  "price": 495
+ },
+ {
+  "book": "Microprocessors & Microcontrollers",
+  "author": "Mandal Soumitra Kumar",
+  "total": 1,
+  "available": 1,
+  "price": 690
+ },
+ {
+  "book": "Operating systems",
+  "author": "Stallings William",
+  "total": 1,
+  "available": 1,
+  "price": 869
+ },
+ {
+  "book": "Digital Design",
+  "author": "Morris Mano M",
+  "total": 1,
+  "available": 1,
+  "price": 699
+ },
+ {
+  "book": "Computer Fundamentals",
+  "author": "Anita Goel",
+  "total": 1,
+  "available": 1,
+  "price": 475
+ },
+ {
+  "book": "Computer Organization",
+  "author": "Carl Hamacher",
+  "total": 1,
+  "available": 1,
+  "price": 595
+ },
+ {
+  "book": "Machine Learning",
+  "author": "Prerna Sharma Mann",
+  "total": 1,
+  "available": 1,
+  "price": 140
+ },
+ {
+  "book": "Cryptography And Network Security",
+  "author": "Atul Kahate",
+  "total": 1,
+  "available": 1,
+  "price": 585
+ },
+ {
+  "total": 304,
+  "available": 304
+ }
+]

@@ -8,6 +8,7 @@ import { collection, onSnapshot } from "firebase/firestore";
 import { auth, db } from "@lib/firebase.config";
 import { onAuthStateChanged } from "firebase/auth";
 import { MdOutlineBookmarkAdd } from "react-icons/md";
+import Loading2 from "./loading";
 
 const Widget = ( {type} ) => {
     const [userNo,setuserNo] = useState("");
@@ -15,6 +16,7 @@ const Widget = ( {type} ) => {
     const [userID,setuserID] = useState("");
     const [wishlistBookNo,setwishlistBookNo] = useState("");
     const [borrowedBookNo,setborrowedBookNo] = useState("");
+    const [loading,setLoading] = useState(true);
     
     useEffect(() => {
         const user = onSnapshot(collection(db,"Users"),(snapShot1) => {
@@ -105,21 +107,21 @@ const Widget = ( {type} ) => {
             break;
     }
 
-  return (
-    <div className="widget">
-        <div className="left">
-            <span className="title"> {data.title} </span>
-            <span className="counter">{data.amount}</span>
-            <span className="link"> {data.link} </span>
+    return (
+        <div className="widget">
+            <div className="left">
+                <span className="title"> {data.title} </span>
+                <span className="counter">{data.amount}</span>
+                <span className="link"> {data.link} </span>
+            </div>
+            <div className="right">
+                <span className="title"></span>
+                <span className="counter">
+                    {data.icon}
+                </span>
+            </div>
         </div>
-        <div className="right">
-            <span className="title"></span>
-            <span className="counter">
-                {data.icon}
-            </span>
-        </div>
-    </div>
-  );
+    );
 };
 
 export default Widget;
