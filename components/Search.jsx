@@ -1,5 +1,3 @@
-"use client";
-
 import { auth, db } from '@lib/firebase.config';
 import { onAuthStateChanged } from 'firebase/auth';
 import { arrayUnion, collection, doc, getDoc, onSnapshot, setDoc, updateDoc } from 'firebase/firestore';
@@ -7,7 +5,6 @@ import { useState, useEffect } from 'react';
 
 const Search = () => {
     const [data, setData] = useState([]);
-    // const [searchTerm, setSearchTerm] = useState('');
     const [user, setUser] = useState(null);
     const [userID,setuserID] = useState('');
     
@@ -38,10 +35,6 @@ const Search = () => {
         }
     }, []);
 
-    const handleSearch = (e) => {
-        setSearchTerm(e.target.value);
-    };
-
     const handleAddToCart = async (item) => {
         const docRef = doc(db, "Books", item);
         const docSnap = await getDoc(docRef);
@@ -59,7 +52,6 @@ const Search = () => {
             } else {
                 await updateDoc(docRef1, {
                     books: arrayUnion(item),
-                    date: arrayUnion(new Date())
                 });
                 await updateDoc(docRef, {
                     borrowedby: arrayUnion(userID),
@@ -69,7 +61,6 @@ const Search = () => {
         } else {
             await setDoc(docRef1, {
                 books: arrayUnion(item),
-                date: arrayUnion(new Date())
             });
             await updateDoc(docRef, {
                 borrowedby: arrayUnion(userID),
@@ -100,20 +91,15 @@ const Search = () => {
         }
     };
 
-    // const filteredData = data.filter((item) => {
-    //     item.book.toLowerCase().includes(searchTerm.toLowerCase());
-    // });
-
     return (
-        <div>
-            {/* <input type="text" placeholder="Search" onChange={handleSearch} /> */}
-            <div className='p-2'>
+        <div className='flex'>
+            <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
                 {data.map((item) => (
-                    <div key={item.id} className="card p-2">
-                        <h3>{item.book}</h3>
-                        <p>{item.author}</p>
-                        <button onClick={() => handleAddToCart(item.id)}>Add to Cart</button>
-                        <button className='p-2' onClick={() => handleAddToWishlist(item.id)}>Add to Wishlist</button>
+                    <div key={item.id} className='p-4 bg-white shadow-md rounded'>
+                        <h3 className='text-xl font-bold'>{item.book}</h3>
+                        <p className='text-gray-600'>{item.author}</p>
+                        <button className='px-3 py-2 mt-4 bg-blue-500 text-white rounded hover:bg-blue-600' onClick={() => handleAddToCart(item.id)}> Add to Cart </button>
+                        <button className='ml-2 px-3 py-2 mt-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400' onClick={() => handleAddToWishlist(item.id)}> Add to Wishlist </button>
                     </div>
                 ))}
             </div>

@@ -19,22 +19,23 @@ const UserNav = () => {
         router.push('/');
       }
     })
+
     return (
         <div>
             <div className="w-full flex mb-2 pt-2 flex-center">
                 <ul className="hidden sm:flex gap-4">
                     <li className="logo_text hover:text-gray-600">
-                        <Link href="/users" className="flex">
+                        <Link href="/users" className="flex" >
                             <MdDashboard size={25} className="mr-1 inline-block"/>
                             Dashboard
                         </Link>
                     </li>
-                    <li className="logo_text hover:text-gray-600">
+                    {/* <li className="logo_text hover:text-gray-600">
                         <Link href={'/users/notification'} className="flex">
                             <IoMdNotifications size={25} className="mr-1 inline-block" />
                             Notifications
                         </Link>
-                    </li>
+                    </li> */}
                     <li className="logo_text hover:text-gray-600">
                         <Link href={'/users/wishlist'} className="flex">
                             <FaHeart size={23} className="mr-1 inline-block" />
@@ -61,14 +62,14 @@ const UserNav = () => {
                                     </Link> 
                                 </center>
                             </li>
-                            <li className="flex">
+                            {/* <li className="flex">
                                 <center>
                                     <Link href={'/users/notification'} className="p-1 inline-block self-center">
                                         <IoMdNotifications size={25} className="mr-1 inline-block" />
                                         Notification
                                     </Link> 
                                 </center>
-                            </li>
+                            </li> */}
                         </div>
                         <div className="flex-col p-1">
                             <li className="flex">
