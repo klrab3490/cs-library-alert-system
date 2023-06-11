@@ -1,11 +1,11 @@
 'use client';
 
-import React from 'react'
+import Cart from "@components/Cart";
 
 const page = () => {
     return (
-        <div>
-            <h1 className='font-satoshi font-semibold flex-center'> Borrowed Books </h1>
+        <div className="flex-center">
+            <Cart />
         </div>
     )
 };
