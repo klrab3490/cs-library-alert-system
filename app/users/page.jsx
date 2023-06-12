@@ -13,8 +13,8 @@ const ClientProtectedPage = () => {
 const page = () => {
     return (
         <div className='flex-col'>
-            <div className='top'>
-                <div className='flex gap-4'>
+            <div className='top '>
+                <div className='sm:flex-col md:flex-col gap-4 lg:flex'>
                     <Widget type='wishlist' />
                     <Widget type='borrowed' />
                 </div>
